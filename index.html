@@ -60,16 +60,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #f7f6f3;
+  --bg: #f4f6fa;
   --surface: #ffffff;
-  --text: #1a1a1a;
-  --text-2: #5a5a5a;
-  --text-3: #9a9a9a;
-  --border: #e3e1dc;
-  --accent: #1a4a6b;
-  --accent-light: #e6eff6;
-  --accent-mid: #3d7fa5;
-  --tag-bg: #eef2f5;
+  --text: #0d1f4e;
+  --text-2: #4a5a7a;
+  --text-3: #9aa4bc;
+  --border: #dce3f0;
+  --accent: #1a3a7a;
+  --accent-light: #e6eef8;
+  --accent-mid: #1a5fad;
+  --accent-sky: #00aadc;
+  --tag-bg: #eaf3fb;
   --r: 10px;
   --r-sm: 6px;
 }
@@ -83,21 +84,21 @@ body.lang-ko{font-family:'Noto Sans KR','Inter',sans-serif}
 a{color:inherit;text-decoration:none}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:100;background:rgba(247,246,243,0.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:56px}
-.nav-brand{font-size:14px;font-weight:600;color:var(--text);letter-spacing:-0.01em}
+nav{position:sticky;top:0;z-index:100;background:rgba(26,58,122,0.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,0.1);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-brand{font-size:14px;font-weight:600;color:#ffffff;letter-spacing:-0.01em}
 .nav-right{display:flex;align-items:center;gap:28px}
 .nav-links{display:flex;gap:22px}
-.nav-links a{font-size:13px;color:var(--text-2);transition:color .2s}
-.nav-links a:hover{color:var(--text)}
-.lang-toggle{display:flex;background:var(--border);border-radius:20px;padding:2px}
-.lang-btn{font-size:12px;font-weight:500;padding:4px 12px;border:none;background:transparent;cursor:pointer;border-radius:18px;color:var(--text-2);transition:all .2s}
-.lang-btn.active{background:var(--surface);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.nav-links a{font-size:13px;color:rgba(255,255,255,0.7);transition:color .2s}
+.nav-links a:hover{color:#ffffff}
+.lang-toggle{display:flex;background:rgba(255,255,255,0.15);border-radius:20px;padding:2px}
+.lang-btn{font-size:12px;font-weight:500;padding:4px 12px;border:none;background:transparent;cursor:pointer;border-radius:18px;color:rgba(255,255,255,0.7);transition:all .2s}
+.lang-btn.active{background:rgba(255,255,255,0.25);color:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,.2)}
 
 /* HERO */
 .hero{max-width:920px;margin:0 auto;padding:72px 40px 60px;display:grid;grid-template-columns:172px 1fr;gap:52px;align-items:start}
 .hero-photo{width:172px;height:216px;border-radius:var(--r);overflow:hidden;flex-shrink:0;border:1px solid var(--border)}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
-.hero-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-mid);font-weight:500;margin-bottom:10px}
+.hero-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-sky);font-weight:500;margin-bottom:10px}
 .hero-name{font-size:34px;font-weight:600;letter-spacing:-.03em;color:var(--text);line-height:1.1;margin-bottom:6px}
 .hero-cred{font-size:14px;color:var(--text-2);margin-bottom:20px;font-weight:300;line-height:1.6}
 .hero-desc{font-size:15px;color:var(--text-2);line-height:1.85;margin-bottom:24px;max-width:520px}
@@ -107,23 +108,23 @@ nav{position:sticky;top:0;z-index:100;background:rgba(247,246,243,0.93);backdrop
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
 .btn{font-size:13px;padding:8px 18px;border-radius:var(--r-sm);transition:all .2s;font-weight:500;display:inline-flex;align-items:center;gap:6px;cursor:pointer;border:none}
 .btn-primary{background:var(--accent);color:#fff;border:1px solid var(--accent)}
-.btn-primary:hover{background:#153d5a}
+.btn-primary:hover{background:#0d2660}
 .btn-secondary{background:var(--surface);color:var(--text);border:1px solid var(--border)}
 .btn-secondary:hover{background:var(--tag-bg)}
 
 /* STATS */
-.stats-bar{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface)}
+.stats-bar{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--accent)}
 .stats-inner{max-width:920px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:repeat(4,1fr)}
-.stat-item{padding:28px 0;text-align:center;border-right:1px solid var(--border)}
+.stat-item{padding:28px 0;text-align:center;border-right:1px solid rgba(255,255,255,0.15)}
 .stat-item:last-child{border-right:none}
-.stat-num{font-size:30px;font-weight:600;color:var(--accent);letter-spacing:-.03em;display:block}
+.stat-num{font-size:30px;font-weight:600;color:#00aadc;letter-spacing:-.03em;display:block}
 .stat-suffix{font-size:18px;font-weight:400}
-.stat-label{font-size:12px;color:var(--text-3);margin-top:3px}
+.stat-label{font-size:12px;color:rgba(255,255,255,0.7);margin-top:3px}
 
 /* MAIN */
 .main{max-width:920px;margin:0 auto;padding:0 40px 80px}
 .section{padding-top:60px}
-.sec-eye{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-mid);font-weight:500;margin-bottom:6px}
+.sec-eye{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-sky);font-weight:500;margin-bottom:6px}
 .sec-title{font-size:20px;font-weight:600;color:var(--text);letter-spacing:-.02em;margin-bottom:28px}
 
 /* HIGHLIGHTS */
@@ -134,7 +135,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(247,246,243,0.93);backdrop
 .pi:last-of-type{margin-bottom:8px;padding-bottom:0;border-bottom:none}
 .pi-title{font-size:13px;color:var(--text);line-height:1.55;margin-bottom:4px}
 .pi-meta{font-size:12px;color:var(--text-3)}
-.card-link{font-size:12px;color:var(--accent-mid);display:inline-flex;align-items:center;gap:4px;margin-top:4px}
+.card-link{font-size:12px;color:var(--accent-sky);display:inline-flex;align-items:center;gap:4px;margin-top:4px}
 .card-link:hover{color:var(--accent)}
 
 /* PUBLICATIONS */
@@ -145,7 +146,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(247,246,243,0.93);backdrop
 .pub-title a{color:var(--text);text-decoration:none;transition:color .15s}
 .pub-title a:hover{color:var(--accent-mid)}
 .pub-authors{font-size:13px;color:var(--text-2);margin-bottom:3px}
-.pub-journal{font-size:12px;color:var(--accent-mid);font-style:italic}
+.pub-journal{font-size:12px;color:var(--accent-sky);font-style:italic}
 .pub-links{display:flex;gap:10px;margin-top:8px;align-items:center;flex-wrap:wrap}
 .pubmed-link{font-size:11px;color:var(--accent-mid);border:1px solid var(--accent-mid);padding:2px 8px;border-radius:4px;text-decoration:none;font-weight:500;transition:all .15s}
 .pubmed-link:hover{background:var(--accent-mid);color:#fff}
@@ -177,18 +178,18 @@ nav{position:sticky;top:0;z-index:100;background:rgba(247,246,243,0.93);backdrop
 /* BLOG */
 .blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .blog-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:20px;display:block;transition:border-color .2s,box-shadow .2s}
-.blog-card:hover{border-color:var(--accent-mid);box-shadow:0 2px 12px rgba(26,74,107,.08)}
+.blog-card:hover{border-color:var(--accent-sky);box-shadow:0 2px 12px rgba(0,170,220,.1)}
 .blog-date{font-size:11px;color:var(--text-3);margin-bottom:8px}
 .blog-title{font-size:14px;color:var(--text);font-weight:500;line-height:1.5;margin-bottom:6px}
 .blog-desc{font-size:13px;color:var(--text-2);line-height:1.6}
 .blog-loading{color:var(--text-3);font-size:14px;padding:20px 0}
 .rss-note{font-size:12px;color:var(--text-3);margin-top:16px}
-.rss-note a{color:var(--accent-mid)}
+.rss-note a{color:var(--accent-sky)}
 
 /* CONTACT */
 .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .contact-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;transition:all .2s;display:block}
-.contact-card:hover{border-color:var(--accent-mid)}
+.contact-card:hover{border-color:var(--accent-sky)}
 .contact-icon{font-size:22px;margin-bottom:8px}
 .contact-lbl{font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
 .contact-val{font-size:13px;color:var(--text);font-weight:500}
@@ -386,8 +387,8 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
 
     <!-- 학력 -->
     <div>
-      <p style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-mid);margin-bottom:16px;" class="en">Education</p>
-      <p style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-mid);margin-bottom:16px;" class="ko">학력</p>
+      <p style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-sky);margin-bottom:16px;" class="en">Education</p>
+      <p style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-sky);margin-bottom:16px;" class="ko">학력</p>
 
       <div class="pub-item" style="grid-template-columns:56px 1fr">
         <span class="pub-yr"></span>
@@ -421,8 +422,8 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
 
     <!-- 경력 -->
     <div>
-      <p style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-mid);margin-bottom:16px;" class="en">Career</p>
-      <p style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-mid);margin-bottom:16px;" class="ko">경력</p>
+      <p style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-sky);margin-bottom:16px;" class="en">Career</p>
+      <p style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-sky);margin-bottom:16px;" class="ko">경력</p>
 
       <div class="pub-item" style="grid-template-columns:56px 1fr">
         <span class="pub-yr"></span>
@@ -474,21 +475,21 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
-        <span class="pub-yr">전</span>
+        <span class="pub-yr en">Former</span><span class="pub-yr ko">전</span>
         <div>
           <p class="pub-title en">Chief, Spine Endoscopy Center, Bumin Hospital Seoul</p>
           <p class="pub-title ko">(전) 서울부민병원 척추내시경센터장</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
-        <span class="pub-yr">전</span>
+        <span class="pub-yr en">Former</span><span class="pub-yr ko">전</span>
         <div>
           <p class="pub-title en">General Manager, Division of Education and Research, Bumin Hospital Seoul</p>
           <p class="pub-title ko">(전) 서울부민병원 교육연구실장</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
-        <span class="pub-yr">전</span>
+        <span class="pub-yr en">Former</span><span class="pub-yr ko">전</span>
         <div>
           <p class="pub-title en">Field Doctor, Kiwoom Heroes (KBO Professional Baseball)</p>
           <p class="pub-title ko">(전) 프로야구 키움히어로즈 필드닥터</p>
