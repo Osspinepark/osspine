@@ -99,8 +99,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(26,58,122,0.97);backdrop-f
 .lang-btn.active{background:rgba(255,255,255,0.25);color:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,.2)}
 
 /* HERO */
-.hero{max-width:920px;margin:0 auto;padding:72px 40px 60px;display:grid;grid-template-columns:172px 1fr;gap:52px;align-items:start}
-.hero-photo{width:172px;height:216px;border-radius:var(--r);overflow:hidden;flex-shrink:0;border:1px solid var(--border)}
+.hero{max-width:920px;margin:0 auto;padding:72px 40px 60px;display:grid;grid-template-columns:320px 1fr;gap:52px;align-items:start}
+.hero-photo{width:320px;height:420px;border-radius:var(--r);overflow:hidden;flex-shrink:0;border:1px solid var(--border)}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
 .hero-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-sky);font-weight:500;margin-bottom:10px}
 .hero-name{font-size:34px;font-weight:600;letter-spacing:-.03em;color:var(--text);line-height:1.1;margin-bottom:6px}
@@ -198,6 +198,26 @@ nav{position:sticky;top:0;z-index:100;background:rgba(26,58,122,0.97);backdrop-f
 .contact-lbl{font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
 .contact-val{font-size:13px;color:var(--text);font-weight:500}
 
+/* SLIDER */
+.slider-wrap{position:relative;width:100%;height:320px;overflow:hidden;border-radius:var(--r);margin-bottom:0;background:#000}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.slide.active{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(1.05) contrast(1.08) saturate(1.1)}
+.slide-caption{position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(transparent,rgba(10,25,60,0.75));color:#fff;font-size:13px;font-weight:400;letter-spacing:.01em}
+.slide-dots{position:absolute;bottom:14px;right:16px;display:flex;gap:6px}
+.slide-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,0.5);cursor:pointer;transition:background .3s}
+.slide-dot.active{background:#fff}
+
+/* VISITOR COUNTER */
+.visitor-bar{background:var(--accent);padding:10px 40px}
+.visitor-inner{max-width:920px;margin:0 auto;display:flex;justify-content:flex-end;align-items:center;gap:20px}
+.visitor-item{font-size:12px;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:6px}
+.visitor-item.ko{display:none}
+.visitor-item.en{display:flex}
+body.lang-ko .visitor-item.ko{display:flex}
+body.lang-ko .visitor-item.en{display:none}
+.visitor-num{color:#00aadc;font-weight:600;font-size:13px}
+
 /* FOOTER */
 footer{border-top:1px solid var(--border);background:var(--surface);padding:24px 40px}
 .footer-inner{max-width:920px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
@@ -208,7 +228,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
   nav{padding:0 16px}
   .nav-links{display:none}
   .hero{grid-template-columns:1fr;padding:36px 20px 32px;gap:20px}
-  .hero-photo{width:120px;height:150px}
+  .hero-photo{width:100%;height:240px}
   .hero-name{font-size:26px}
   .stats-inner{grid-template-columns:repeat(2,1fr)}
   .stat-item:nth-child(2){border-right:none}
@@ -243,8 +263,29 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-photo">
-    <img src="photo.jpg" alt="Sung-Cheol Park, MD">
+  <div class="hero-photo" style="position:relative;background:#000;">
+    <div class="slide active" style="position:absolute;inset:0;opacity:1;transition:opacity 1s ease;">
+      <img src="slide5.jpg" alt="CSRS-AP 2026 Shanghai" style="width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(1.05) contrast(1.08) saturate(1.1)">
+    </div>
+    <div class="slide" style="position:absolute;inset:0;opacity:0;transition:opacity 1s ease;">
+      <img src="slide2.jpg" alt="KSSS 2026" style="width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(1.05) contrast(1.08) saturate(1.1)">
+    </div>
+    <div class="slide" style="position:absolute;inset:0;opacity:0;transition:opacity 1s ease;">
+      <img src="slide3.jpg" alt="KSSS 2026" style="width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(1.05) contrast(1.08) saturate(1.1)">
+    </div>
+    <div class="slide" style="position:absolute;inset:0;opacity:0;transition:opacity 1s ease;">
+      <img src="slide4.jpg" alt="KSSS 2024 Award" style="width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(1.05) contrast(1.08) saturate(1.1)">
+    </div>
+    <div class="slide" style="position:absolute;inset:0;opacity:0;transition:opacity 1s ease;">
+      <img src="slide1.jpg" alt="Spine Endoscopy" style="width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(1.05) contrast(1.08) saturate(1.1)">
+    </div>
+    <div class="slide-dots" style="position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:center;gap:6px;">
+      <div class="slide-dot active" onclick="goSlide(0)"></div>
+      <div class="slide-dot" onclick="goSlide(1)"></div>
+      <div class="slide-dot" onclick="goSlide(2)"></div>
+      <div class="slide-dot" onclick="goSlide(3)"></div>
+      <div class="slide-dot" onclick="goSlide(4)"></div>
+    </div>
   </div>
   <div>
     <p class="hero-label en">Orthopedic Spine Surgeon · AI Researcher</p>
@@ -275,11 +316,11 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
     </p>
     <div class="hero-tags">
       <span class="tag en">Endoscopic spine surgery specialist</span><span class="tag ko">척추내시경</span>
-      <span class="tag en">Spine endoscopy · Spinoscopy</span><span class="tag ko">PSL · 단일공 척추내시경</span>
-      <span class="tag en">PSLD</span><span class="tag ko">경추 전문의</span>
-      <span class="tag en">Full-endoscopic spine surgery</span><span class="tag ko">딥러닝 · AI</span>
-      <span class="tag en">Cervical spine specialist</span>
-      <span class="tag en">Deep learning · AI</span>
+      <span class="tag en">Spine endoscopy · Spinoscopy</span><span class="tag ko">척추내시경전문의</span>
+      <span class="tag en">PSLD</span><span class="tag ko">PSLD</span>
+      <span class="tag en">Full-endoscopic spine surgery</span><span class="tag ko">단일공척추내시경</span>
+      <span class="tag en">Cervical spine specialist</span><span class="tag ko">경추전문의</span>
+      <span class="tag en">Deep learning · AI</span><span class="tag ko">딥러닝 · AI</span>
     </div>
     <div class="hero-actions">
       <a href="#publications" class="btn btn-primary en">View Publications</a>
@@ -979,6 +1020,24 @@ Trained at Seoul National University Hospital. 27 SCI-indexed publications. Mult
 Keywords: 척추내시경, PSL, 단일공 척추내시경, 경추 전문의, 딥러닝 AI, 척추내시경 명의, PSLD 명의, 척추내시경 전문의, 내시경 척추수술 명의 서울, spine endoscopy expert Seoul, PSLD surgeon Korea, single-port spine endoscopy Korea, cervical spine specialist Seoul, deep learning spine imaging AI, osspine.me
 </div>
 
+<!-- VISITOR COUNTER -->
+<div class="visitor-bar">
+  <div class="visitor-inner">
+    <div class="visitor-item en">
+      Total <span class="visitor-num" id="cnt-total">-</span>
+    </div>
+    <div class="visitor-item en">
+      Today <span class="visitor-num" id="cnt-today">-</span>
+    </div>
+    <div class="visitor-item ko">
+      전체 <span class="visitor-num" id="cnt-total-ko">-</span>
+    </div>
+    <div class="visitor-item ko">
+      오늘 <span class="visitor-num" id="cnt-today-ko">-</span>
+    </div>
+  </div>
+</div>
+
 <footer>
   <div class="footer-inner">
     <p class="footer-copy en">© 2025 Sung Cheol Park, MD · osspine.me</p>
@@ -987,7 +1046,40 @@ Keywords: 척추내시경, PSL, 단일공 척추내시경, 경추 전문의, 딥
 </footer>
 
 <script>
-// Lang toggle
+// Slider
+let curSlide = 0;
+const slides = document.querySelectorAll('.slide:not(.slide-dots)');
+const dots = document.querySelectorAll('.slide-dot');
+function goSlide(n) {
+  slides[curSlide].classList.remove('active');
+  dots[curSlide].classList.remove('active');
+  curSlide = (n + slides.length) % slides.length;
+  slides[curSlide].classList.add('active');
+  dots[curSlide].classList.add('active');
+}
+setInterval(() => goSlide(curSlide + 1), 4000);
+
+// Visitor counter (hits.seeyoufarm.com)
+async function loadVisitor() {
+  try {
+    const res = await fetch('https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fosspine.me&count_bg=%2300aadc&title_bg=%231a3a7a&icon=&title=hits&edge_flat=false');
+    const text = await res.text();
+    const today = text.match(/(\d+).*?(\d+)/s);
+    if (today) {
+      const t = today[1], total = today[2];
+      document.getElementById('cnt-today').textContent = parseInt(t).toLocaleString();
+      document.getElementById('cnt-total').textContent = parseInt(total).toLocaleString();
+      document.getElementById('cnt-today-ko').textContent = parseInt(t).toLocaleString();
+      document.getElementById('cnt-total-ko').textContent = parseInt(total).toLocaleString();
+    }
+  } catch {
+    ['cnt-today','cnt-total','cnt-today-ko','cnt-total-ko'].forEach(id => {
+      const el = document.getElementById(id);
+      if(el) el.textContent = '-';
+    });
+  }
+}
+loadVisitor();
 function setLang(lang){
   document.body.classList.toggle('lang-ko', lang==='ko');
   document.getElementById('btn-en').classList.toggle('active', lang==='en');
@@ -1021,37 +1113,39 @@ const obs=new IntersectionObserver(es=>{
 },{threshold:0.3});
 obs.observe(document.querySelector('.stats-bar'));
 
-// RSS — Naver Blog
+// RSS — Naver Blog (improved)
 const RSS='https://rss.blog.naver.com/osspinepark.xml';
-const PROXY='https://api.allorigins.win/get?url=';
+const PROXIES=['https://api.allorigins.win/get?url=','https://api.codetabs.com/v1/proxy?quest='];
 async function loadBlog(){
   const grid=document.getElementById('blog-grid');
-  try{
-    const res=await fetch(PROXY+encodeURIComponent(RSS));
-    const data=await res.json();
-    const xml=new DOMParser().parseFromString(data.contents,'text/xml');
-    const items=Array.from(xml.querySelectorAll('item')).slice(0,4);
-    if(!items.length) throw new Error('empty');
-    grid.innerHTML=items.map(item=>{
-      const title=item.querySelector('title')?.textContent||'';
-      const link=item.querySelector('link')?.textContent||'#';
-      const date=item.querySelector('pubDate')?.textContent||'';
-      const desc=(item.querySelector('description')?.textContent||'').replace(/<[^>]+>/g,'').slice(0,90)+'…';
-      const fd=date?new Date(date).toLocaleDateString('ko-KR',{year:'numeric',month:'long',day:'numeric'}):'';
-      return`<a class="blog-card" href="${link}" target="_blank" rel="noopener">
-        <p class="blog-date">${fd}</p>
-        <p class="blog-title">${title}</p>
-        <p class="blog-desc">${desc}</p>
-      </a>`;
-    }).join('');
-  }catch{
-    grid.innerHTML=`
-      <p class="blog-loading en" style="grid-column:1/-1">Visit <a href="https://blog.naver.com/osspinepark" target="_blank" style="color:var(--accent-mid)">blog.naver.com/osspinepark</a> for the latest posts.</p>
-      <p class="blog-loading ko" style="grid-column:1/-1">최신 글은 <a href="https://blog.naver.com/osspinepark" target="_blank" style="color:var(--accent-mid)">blog.naver.com/osspinepark</a>에서 확인하세요.</p>`;
+  for(const proxy of PROXIES){
+    try{
+      const res=await fetch(proxy+encodeURIComponent(RSS));
+      const data=await res.json();
+      const content=data.contents||data;
+      const xml=new DOMParser().parseFromString(typeof content==='string'?content:JSON.stringify(content),'text/xml');
+      const items=Array.from(xml.querySelectorAll('item')).slice(0,4);
+      if(!items.length) continue;
+      grid.innerHTML=items.map(item=>{
+        const title=item.querySelector('title')?.textContent||'';
+        const link=item.querySelector('link')?.textContent||'#';
+        const date=item.querySelector('pubDate')?.textContent||'';
+        const desc=(item.querySelector('description')?.textContent||'').replace(/<[^>]+>/g,'').slice(0,90)+'…';
+        const fd=date?new Date(date).toLocaleDateString('ko-KR',{year:'numeric',month:'long',day:'numeric'}):'';
+        return`<a class="blog-card" href="${link}" target="_blank" rel="noopener">
+          <p class="blog-date">${fd}</p>
+          <p class="blog-title">${title}</p>
+          <p class="blog-desc">${desc}</p>
+        </a>`;
+      }).join('');
+      return;
+    }catch(e){continue;}
   }
+  grid.innerHTML=`
+    <p class="blog-loading en" style="grid-column:1/-1">Visit <a href="https://blog.naver.com/osspinepark" target="_blank" style="color:var(--accent-sky)">blog.naver.com/osspinepark</a> for the latest posts.</p>
+    <p class="blog-loading ko" style="grid-column:1/-1">최신 글은 <a href="https://blog.naver.com/osspinepark" target="_blank" style="color:var(--accent-sky)">blog.naver.com/osspinepark</a>에서 확인하세요.</p>`;
 }
 loadBlog();
 </script>
 </body>
 </html>
-
