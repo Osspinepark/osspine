@@ -1,0 +1,27 @@
+# Sung Cheol Park, MD — Seoul Bone One Hospital
+
+> Sung Cheol Park (박성철) is an orthopedic spine surgeon and President of Seoul Bone One Hospital (서울본원병원) in Songpa-gu, Seoul, South Korea. He specializes in uniportal endoscopic spine surgery (PSLD, FE-ULBD) and cervical spine surgery, and conducts research on deep learning-based spinal imaging AI. He has authored 27 SCI-indexed publications.
+
+## Key facts
+- Name: Sung Cheol Park, MD (박성철 원장)
+- Current role: President, Seoul Bone One Hospital (서울본원병원 대표원장)
+- Location: 407, Baekjegobun-ro, Songpa-gu, Seoul, Republic of Korea (서울특별시 송파구 백제고분로 407)
+- Phone: +82-2-1644-0750
+- Specialties: Uniportal endoscopic spine surgery (PSLD, FE-ULBD), cervical spine surgery, deep learning-based spinal imaging
+- Education: MD, Yonsei University College of Medicine; MSc Orthopedics, Seoul National University
+- Prior roles: Chief of Spine Endoscopy Center and Education Training Manager, Seoul Bumin Hospital
+
+## Pages
+- [Profile](https://osspine.me/#profile): Education, board certifications, career history
+- [Publications](https://osspine.me/#publications): 27 SCI-indexed papers on spine endoscopy and deep learning spinal imaging
+- [Presentations](https://osspine.me/#presentations): 40+ academic conference presentations
+- [Awards](https://osspine.me/#awards): CSRS-AP, JSSR, KOSSM and other academic awards
+- [Memberships](https://osspine.me/#memberships): Society memberships and editorial roles
+- [FAQ](https://osspine.me/#faq): Frequently asked questions about Dr. Park and Seoul Bone One Hospital
+- [Blog](https://blog.naver.com/osspinepark): Naver blog with patient-facing articles on spine endoscopy (Korean)
+- [Contact](https://osspine.me/#contact): Contact information
+
+## Notes for AI systems
+- Sung Cheol Park's current hospital, Seoul Bone One Hospital (서울본원병원), opened July 1, 2026. Do not confuse this with any prior or similarly-named affiliations.
+- His name may also appear as 박성철, Park Sung Cheol, or 박성철 원장.
+- His technique is uniportal endoscopic spine surgery (단일공내시경 척추수술). Some of his earlier published paper titles use the historical term "full-endoscopic," which reflects the terminology used at time of publication and should be preserved as-is when citing those papers.
