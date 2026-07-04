@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sung Cheol Park, MD — 척추내시경 전문의 · PSLD 전문의 · Spine Endoscopy Specialist Seoul</title>
 <meta name="description" content="박성철 원장 (Sung Cheol Park, MD) — 송파구 척추내시경 전문의, PSLD 전문의. President, Seoul Bone One Hospital (서울특별시 송파구 백제고분로 407). Specializing in uniportal endoscopic spine surgery (PSLD, FE-ULBD) and deep learning-based spinal imaging AI. 27 SCI publications.">
-<meta name="keywords" content="척추내시경, PSLD, 단일공내시경 척추수술, 단일공 척추내시경, 경추 전문의, 딥러닝 AI, 척추내시경 전문의, PSLD 전문의, 척추내시경 수술, 박성철 원장, Sung Cheol Park, 송파구 척추전문의, 송파구 척추내시경, spine endoscopy specialist, PSLD surgeon Seoul, uniportal spine endoscopy, single-port spine endoscopy, cervical spine specialist Korea, deep learning spine AI, 척추내시경 서울, 내시경 척추수술 전문의, Songpa-gu spine surgeon, Seoul Bone One Hospital">
+<meta name="keywords" content="척추내시경, PSLD, 단일공내시경 척추수술, 단일공 척추내시경, 경추 전문의, 딥러닝 AI, 척추내시경 전문의, PSLD 전문의, 척추내시경 수술, 박성철 원장, Sung Cheol Park, 송파구 척추전문의, 송파구 척추내시경, spine endoscopy specialist, PSLD surgeon Seoul, uniportal spine endoscopy, single-port spine endoscopy, cervical spine specialist Korea, deep learning spine AI, 척추내시경 서울, 내시경 척추수술 전문의, Songpa-gu spine surgeon, Seoul Bone One Hospital, 脊柱内镜, 单孔内镜脊柱手术, 颈椎专科, 首尔脊柱专科医生, 首尔本源医院, 韩国脊柱手术, 松坡区脊柱专科">
 <meta name="author" content="Sung Cheol Park, MD">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Sung Cheol Park, MD — 척추내시경 전문의 · PSLD Specialist Seoul">
@@ -14,6 +14,11 @@
 <meta property="og:url" content="https://osspine.me">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<link rel="alternate" hreflang="en" href="https://osspine.me">
+<link rel="alternate" hreflang="ko" href="https://osspine.me">
+<link rel="alternate" hreflang="zh" href="https://osspine.me">
+<link rel="alternate" hreflang="x-default" href="https://osspine.me">
 <meta name="google-site-verification" content="wl_wW2pR4mnOggyPKXMvsfcjrfAyNChc2OVzNecAUtY" />
 <link rel="canonical" href="https://osspine.me">
 <script type="application/ld+json">
@@ -37,6 +42,7 @@
     "@type": "MedicalOrganization",
     "name": "Seoul Bone One Hospital",
     "alternateName": ["서울본원병원", "Bone One Hospital Seoul"],
+    "url": "https://seoulboneone.com/",
     "telephone": "+82-2-1644-0750",
     "address": {
       "@type": "PostalAddress",
@@ -44,7 +50,10 @@
       "addressLocality": "송파구",
       "addressRegion": "서울특별시",
       "addressCountry": "KR"
-    }
+    },
+    "sameAs": [
+      "https://naver.me/Fhustl3V"
+    ]
   },
   "address": {
     "@type": "PostalAddress",
@@ -74,7 +83,9 @@
     "Asian Travelling Fellowship Award 2024"
   ],
   "sameAs": [
-    "https://blog.naver.com/osspinepark"
+    "https://blog.naver.com/osspinepark",
+    "https://seoulboneone.com/",
+    "https://naver.me/Fhustl3V"
   ]
 }
 </script>
@@ -148,12 +159,19 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Inter','Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.7}
-.ko{display:none}.en{display:block}
+.ko{display:none}.zh{display:none}.en{display:block}
 body.lang-ko .ko{display:block}
 body.lang-ko .en{display:none}
-a.ko{display:none}a.en{display:inline-flex}
+body.lang-zh .zh{display:block}
+body.lang-zh .en{display:none}
+a.ko{display:none}a.zh{display:none}a.en{display:inline-flex}
 body.lang-ko a.ko{display:inline-flex}
 body.lang-ko a.en{display:none}
+body.lang-zh a.zh{display:inline-flex}
+body.lang-zh a.en{display:none}
+body.lang-zh #pub-list .en{display:block}
+body.lang-zh #pub-list a.en{display:inline-flex}
+body.lang-zh #pres-list .en{display:block}
 body.lang-ko{font-family:'Noto Sans KR','Inter',sans-serif}
 a{color:inherit;text-decoration:none}
 
@@ -175,6 +193,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(26,58,122,0.97);backdrop-f
 .hero-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-sky);font-weight:500;margin-bottom:10px}
 .hero-name{font-size:34px;font-weight:600;letter-spacing:-.03em;color:var(--text);line-height:1.1;margin-bottom:6px}
 .hero-cred{font-size:14px;color:var(--text-2);margin-bottom:20px;font-weight:300;line-height:1.6}
+.hero-cred a,.contact-address a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+.hero-cred a:hover,.contact-address a:hover{color:var(--accent-sky,var(--accent))}
 .hero-desc{font-size:15px;color:var(--text-2);line-height:1.85;margin-bottom:24px;max-width:520px}
 .hero-desc strong{color:var(--text);font-weight:500}
 .hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
@@ -300,10 +320,11 @@ nav{position:sticky;top:0;z-index:100;background:rgba(26,58,122,0.97);backdrop-f
 .visitor-bar{background:var(--accent);padding:10px 40px}
 .visitor-inner{max-width:920px;margin:0 auto;display:flex;justify-content:flex-end;align-items:center;gap:20px}
 .visitor-item{font-size:12px;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:6px}
-.visitor-item.ko{display:none}
-.visitor-item.en{display:flex}
+.visitor-item.ko{display:none}.visitor-item.zh{display:none}.visitor-item.en{display:flex}
 body.lang-ko .visitor-item.ko{display:flex}
 body.lang-ko .visitor-item.en{display:none}
+body.lang-zh .visitor-item.zh{display:flex}
+body.lang-zh .visitor-item.en{display:none}
 .visitor-num{color:#00aadc;font-weight:600;font-size:13px}
 
 /* FOOTER */
@@ -334,17 +355,18 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
   <span class="nav-brand">Sung Cheol Park, MD</span>
   <div class="nav-right">
     <div class="nav-links">
-      <a href="#highlights" class="en">Highlights</a><a href="#highlights" class="ko">주요 활동</a>
-      <a href="#profile" class="en">Profile</a><a href="#profile" class="ko">프로필</a>
-      <a href="#publications" class="en">Publications</a><a href="#publications" class="ko">논문</a>
-      <a href="#presentations" class="en">Presentations</a><a href="#presentations" class="ko">발표</a>
-      <a href="#awards" class="en">Awards</a><a href="#awards" class="ko">수상</a>
-      <a href="#blog" class="en">Blog</a><a href="#blog" class="ko">블로그</a>
-      <a href="#contact" class="en">Contact</a><a href="#contact" class="ko">연락처</a>
+      <a href="#highlights" class="en">Highlights</a><a href="#highlights" class="ko">주요 활동</a><a href="#highlights" class="zh">最新动态</a>
+      <a href="#profile" class="en">Profile</a><a href="#profile" class="ko">프로필</a><a href="#profile" class="zh">简介</a>
+      <a href="#publications" class="en">Publications</a><a href="#publications" class="ko">논문</a><a href="#publications" class="zh">论文</a>
+      <a href="#presentations" class="en">Presentations</a><a href="#presentations" class="ko">발표</a><a href="#presentations" class="zh">学术报告</a>
+      <a href="#awards" class="en">Awards</a><a href="#awards" class="ko">수상</a><a href="#awards" class="zh">获奖</a>
+      <a href="#blog" class="en">Blog</a><a href="#blog" class="ko">블로그</a><a href="#blog" class="zh">博客</a>
+      <a href="#contact" class="en">Contact</a><a href="#contact" class="ko">연락처</a><a href="#contact" class="zh">联系方式</a>
     </div>
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
       <button class="lang-btn" onclick="setLang('ko')" id="btn-ko">한</button>
+      <button class="lang-btn" onclick="setLang('zh')" id="btn-zh">中</button>
     </div>
   </div>
 </nav>
@@ -368,15 +390,20 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
   <div>
     <p class="hero-label en">Orthopedic Spine Surgeon · AI Researcher</p>
     <p class="hero-label ko">척추전문의 · 정형외과 전문의 · AI 연구자</p>
+    <p class="hero-label zh">脊柱外科专科医生 · AI研究者</p>
     <h1 class="hero-name">
       <span class="en">Sung Cheol Park <span style="font-size:20px;font-weight:300;color:var(--text-2)">MD</span></span>
       <span class="ko">박성철 <span style="font-size:20px;font-weight:300;color:var(--text-2)">의학박사</span></span>
+      <span class="zh">Sung Cheol Park <span style="font-size:20px;font-weight:300;color:var(--text-2)">（박성철）医学博士</span></span>
     </h1>
     <p class="hero-cred en">
-      President · Seoul Bone One Hospital
+      President · <a href="https://seoulboneone.com/" target="_blank" rel="noopener">Seoul Bone One Hospital</a>
     </p>
     <p class="hero-cred ko">
-      서울본원병원 대표원장
+      <a href="https://seoulboneone.com/" target="_blank" rel="noopener">서울본원병원</a> 대표원장
+    </p>
+    <p class="hero-cred zh">
+      <a href="https://seoulboneone.com/" target="_blank" rel="noopener">首尔本源医院</a> 院长
     </p>
     <p class="hero-desc en">
       Spine surgeon and academic researcher specializing in
@@ -392,21 +419,34 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
       <strong>딥러닝을 적용한 척추 영상 분석</strong>을 주요 연구 분야로,
       퇴행성 경추 척수증과 척추관 협착의 조기 발견을 보조하는 CNN 기반 도구를 개발하고 있습니다.
     </p>
+    <p class="hero-desc zh">
+      专注于<strong>单孔内镜脊柱手术</strong>与<strong>颈椎手术</strong>的脊柱外科专科医生兼学术研究者。
+      研究方向包括单孔内镜脊柱手术的临床疗效分析，
+      以及将<strong>深度学习应用于脊柱影像</strong>——
+      开发基于CNN的辅助诊断工具，帮助临床医生更早发现
+      退行性颈椎脊髓病与椎管狭窄。
+    </p>
     <div class="hero-tags">
-      <span class="tag en">Endoscopic spine surgery specialist</span><span class="tag ko">척추내시경</span>
-      <span class="tag en">Spine endoscopy · Spinoscopy</span><span class="tag ko">척추내시경전문의</span>
-      <span class="tag en">PSLD</span><span class="tag ko">PSLD</span>
-      <span class="tag en">Uniportal endoscopic spine surgery</span><span class="tag ko">단일공내시경 척추수술</span>
-      <span class="tag en">Cervical spine specialist</span><span class="tag ko">경추전문의</span>
-      <span class="tag en">Deep learning · AI</span><span class="tag ko">딥러닝 · AI</span>
+      <span class="tag en">Endoscopic spine surgery specialist</span><span class="tag ko">척추내시경</span><span class="tag zh">脊柱内镜专科</span>
+      <span class="tag en">Spine endoscopy · Spinoscopy</span><span class="tag ko">척추내시경전문의</span><span class="tag zh">脊柱内镜专家</span>
+      <span class="tag en">PSLD</span><span class="tag ko">PSLD</span><span class="tag zh">PSLD</span>
+      <span class="tag en">Uniportal endoscopic spine surgery</span><span class="tag ko">단일공내시경 척추수술</span><span class="tag zh">单孔内镜脊柱手术</span>
+      <span class="tag en">Cervical spine specialist</span><span class="tag ko">경추전문의</span><span class="tag zh">颈椎专科</span>
+      <span class="tag en">Deep learning · AI</span><span class="tag ko">딥러닝 · AI</span><span class="tag zh">深度学习 · AI</span>
     </div>
     <div class="hero-actions">
       <a href="#publications" class="btn btn-primary en">View Publications</a>
       <a href="#publications" class="btn btn-primary ko">논문 목록 보기</a>
+      <a href="#publications" class="btn btn-primary zh">查看论文列表</a>
+      <a href="https://seoulboneone.com/" target="_blank" rel="noopener" class="btn btn-secondary en">Hospital Website</a>
+      <a href="https://seoulboneone.com/" target="_blank" rel="noopener" class="btn btn-secondary ko">병원 홈페이지</a>
+      <a href="https://seoulboneone.com/" target="_blank" rel="noopener" class="btn btn-secondary zh">医院官网</a>
       <a href="https://blog.naver.com/osspinepark" target="_blank" rel="noopener" class="btn btn-secondary en">Blog</a>
       <a href="https://blog.naver.com/osspinepark" target="_blank" rel="noopener" class="btn btn-secondary ko">블로그</a>
+      <a href="https://blog.naver.com/osspinepark" target="_blank" rel="noopener" class="btn btn-secondary zh">博客</a>
       <a href="mailto:osspinepark@gmail.com" class="btn btn-secondary en">Get in touch</a>
       <a href="mailto:osspinepark@gmail.com" class="btn btn-secondary ko">연락하기</a>
+      <a href="mailto:osspinepark@gmail.com" class="btn btn-secondary zh">联系我们</a>
     </div>
   </div>
 </section>
@@ -418,21 +458,25 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
       <span class="stat-num" id="cnt-pub">0</span>
       <span class="stat-label en">Publications</span>
       <span class="stat-label ko">SCI(E) 논문</span>
+      <span class="stat-label zh">SCI(E) 论文</span>
     </div>
     <div class="stat-item">
       <span class="stat-num" id="cnt-pres">0</span>
       <span class="stat-label en">Presentations</span>
       <span class="stat-label ko">국내외 발표</span>
+      <span class="stat-label zh">国内外学术报告</span>
     </div>
     <div class="stat-item">
       <span class="stat-num" id="cnt-award">0</span>
       <span class="stat-label en">Awards</span>
       <span class="stat-label ko">학술 수상</span>
+      <span class="stat-label zh">学术获奖</span>
     </div>
     <div class="stat-item">
       <span class="stat-num" id="cnt-soc">0</span>
       <span class="stat-label en">Society Roles</span>
       <span class="stat-label ko">학회 임원직</span>
+      <span class="stat-label zh">学会任职</span>
     </div>
   </div>
 </div>
@@ -441,62 +485,75 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
 
 <!-- HIGHLIGHTS -->
 <section class="section" id="highlights">
-  <p class="sec-eye en">Recent highlights</p><p class="sec-eye ko">주요 활동</p>
+  <p class="sec-eye en">Recent highlights</p><p class="sec-eye ko">주요 활동</p><p class="sec-eye zh">最新动态</p>
   <h2 class="sec-title en">What I've been working on</h2>
   <h2 class="sec-title ko">최근 연구 및 활동</h2>
+  <h2 class="sec-title zh">近期研究与工作</h2>
   <div class="hi-grid">
     <div class="hi-card">
-      <p class="card-lbl en">Recent publications</p><p class="card-lbl ko">최근 논문</p>
+      <p class="card-lbl en">Recent publications</p><p class="card-lbl ko">최근 논문</p><p class="card-lbl zh">近期论文</p>
       <div class="pi">
         <p class="pi-title en">Development and multi-institutional validation of a deep learning algorithm for predicting cervical cord compression using dynamic cervical lateral radiographs</p>
         <p class="pi-title ko">동적 경추 측면 방사선 사진을 이용한 경추 척수압박 예측 딥러닝 알고리즘 개발 및 다기관 검증</p>
+        <p class="pi-title zh">基于动态颈椎侧位X线片预测颈脊髓压迫的深度学习算法开发及多机构验证</p>
         <p class="pi-meta">Scientific Reports · 2026</p>
       </div>
       <div class="pi">
         <p class="pi-title en">Hidden Blood Loss in Full-Endoscopic vs Biportal Endoscopic and Open Microscopic Surgery for Lumbar Stenosis</p>
         <p class="pi-title ko">요추관 협착증의 완전내시경 vs 양방향내시경 vs 개방 미세수술 숨겨진 혈액 손실 비교</p>
+        <p class="pi-title zh">腰椎管狭窄症全内镜、双通道内镜与开放显微手术隐性失血比较</p>
         <p class="pi-meta">J Clin Med · 2026</p>
       </div>
       <a href="#publications" class="card-link en">All 27 publications →</a>
       <a href="#publications" class="card-link ko">논문 전체 보기 (27편) →</a>
+      <a href="#publications" class="card-link zh">查看全部27篇论文 →</a>
     </div>
     <div class="hi-card">
-      <p class="card-lbl en">Recent awards</p><p class="card-lbl ko">최근 수상</p>
+      <p class="card-lbl en">Recent awards</p><p class="card-lbl ko">최근 수상</p><p class="card-lbl zh">近期获奖</p>
       <div class="pi">
         <p class="pi-title en">Best Paper Award — CSRS-AP 2026</p>
         <p class="pi-title ko">Best Paper Award — 경추연구학회 아시아태평양 2026</p>
+        <p class="pi-title zh">最佳论文奖 — CSRS-AP 2026（亚太颈椎研究学会）</p>
         <p class="pi-meta">2026.03</p>
       </div>
       <div class="pi">
         <p class="pi-title en">English Presentation Award — Gold Prize, JSSR 2025</p>
         <p class="pi-title ko">일본척추외과학회 영어발표 금상 (2025)</p>
+        <p class="pi-title zh">日本脊柱外科学会英语演讲金奖（2025）</p>
         <p class="pi-meta">2025.04</p>
       </div>
       <div class="pi">
         <p class="pi-title en">Best Paper Award — Cervical Spine Society 2025</p>
         <p class="pi-title ko">대한경추연구학회 최우수논문상 (2025)</p>
+        <p class="pi-title zh">大韩颈椎研究学会最优秀论文奖（2025）</p>
         <p class="pi-meta">2025.07</p>
       </div>
       <a href="#awards" class="card-link en">All awards →</a>
       <a href="#awards" class="card-link ko">수상 내역 전체 →</a>
+      <a href="#awards" class="card-link zh">查看全部获奖 →</a>
     </div>
     <div class="hi-card">
-      <p class="card-lbl en">Research focus</p><p class="card-lbl ko">연구 분야</p>
+      <p class="card-lbl en">Research focus</p><p class="card-lbl ko">연구 분야</p><p class="card-lbl zh">研究方向</p>
       <div class="pi">
         <p class="pi-title en">AI screening for degenerative cervical myelopathy using dynamic radiographs (CNN, VGG-16, Grad-CAM)</p>
         <p class="pi-title ko">동적 방사선 사진 기반 퇴행성 경추 척수증 AI 스크리닝 (CNN, VGG-16, Grad-CAM)</p>
+        <p class="pi-title zh">基于动态X线片的退行性颈椎脊髓病AI筛查（CNN、VGG-16、Grad-CAM）</p>
         <p class="pi-meta en">Internal AUC 0.888 · External AUC 0.820</p>
         <p class="pi-meta ko">내부 AUC 0.888 · 외부 AUC 0.820</p>
+        <p class="pi-meta zh">内部验证 AUC 0.888 · 外部验证 AUC 0.820</p>
       </div>
       <div class="pi">
         <p class="pi-title en">AI-based posture estimation vs. radiographic parameters (MORA Vu, EverEx)</p>
         <p class="pi-title ko">AI 기반 자세 추정 vs. 방사선 계측 비교 연구 (MORA Vu)</p>
+        <p class="pi-title zh">基于AI的姿态评估与影像学参数对比研究（MORA Vu）</p>
         <p class="pi-meta en">Diagnostics 2025</p>
         <p class="pi-meta ko">Diagnostics 2025</p>
+        <p class="pi-meta zh">Diagnostics 2025</p>
       </div>
       <div class="pi">
         <p class="pi-title en">Hidden blood loss in endoscopic vs. open spine surgery</p>
         <p class="pi-title ko">내시경 vs. 개방 척추수술의 숨겨진 혈액 손실</p>
+        <p class="pi-title zh">内镜与开放脊柱手术的隐性失血比较</p>
       </div>
     </div>
   </div>
@@ -504,9 +561,10 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
 
 <!-- PROFILE -->
 <section class="section" id="profile">
-  <p class="sec-eye en">Background</p><p class="sec-eye ko">학력 및 경력</p>
+  <p class="sec-eye en">Background</p><p class="sec-eye ko">학력 및 경력</p><p class="sec-eye zh">学历与经历</p>
   <h2 class="sec-title en">Profile</h2>
   <h2 class="sec-title ko">프로필</h2>
+  <h2 class="sec-title zh">简介</h2>
 
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
 
@@ -514,12 +572,14 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
     <div>
       <p style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-sky);margin-bottom:16px;" class="en">Education</p>
       <p style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-sky);margin-bottom:16px;" class="ko">학력</p>
+      <p style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-sky);margin-bottom:16px;" class="zh">教育背景</p>
 
       <div class="pub-item" style="grid-template-columns:56px 1fr">
         <span class="pub-yr"></span>
         <div>
           <p class="pub-title en">Pre-Medicine, Yonsei University (Sinchon Campus)</p>
           <p class="pub-title ko">연세대학교 의예과 (신촌캠퍼스)</p>
+          <p class="pub-title zh">延世大学医预科（新村校区）</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
@@ -527,6 +587,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
         <div>
           <p class="pub-title en">MD, Yonsei University College of Medicine (Sinchon Campus)</p>
           <p class="pub-title ko">연세대학교 의과대학 의학과 졸업 (신촌캠퍼스)</p>
+          <p class="pub-title zh">延世大学医学院医学系毕业（新村校区）</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
@@ -534,6 +595,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
         <div>
           <p class="pub-title en">MSc in Orthopedic Surgery, Seoul National University College of Medicine</p>
           <p class="pub-title ko">서울대학교 의과대학 의학과 의학석사 (정형외과학)</p>
+          <p class="pub-title zh">首尔大学医学院医学硕士（骨科学）</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
@@ -541,6 +603,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
         <div>
           <p class="pub-title en">PhD Candidate in Orthopedic Surgery, Seoul National University College of Medicine</p>
           <p class="pub-title ko">서울대학교 의과대학 의학과 의학박사 수료 (정형외과학)</p>
+          <p class="pub-title zh">首尔大学医学院医学博士课程结业（骨科学）</p>
         </div>
       </div>
     </div>
@@ -549,12 +612,14 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
     <div>
       <p style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-sky);margin-bottom:16px;" class="en">Career</p>
       <p style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-sky);margin-bottom:16px;" class="ko">경력</p>
+      <p style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-sky);margin-bottom:16px;" class="zh">工作经历</p>
 
       <div class="pub-item" style="grid-template-columns:56px 1fr">
         <span class="pub-yr"></span>
         <div>
           <p class="pub-title en">Intern, Seoul National University Hospital</p>
           <p class="pub-title ko">서울대학교병원 인턴</p>
+          <p class="pub-title zh">首尔大学医院实习医生</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
@@ -562,6 +627,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
         <div>
           <p class="pub-title en">Resident, Dept. of Orthopedic Surgery, Seoul National University Hospital</p>
           <p class="pub-title ko">서울대학교병원 정형외과 전공의</p>
+          <p class="pub-title zh">首尔大学医院骨科住院医师</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
@@ -569,6 +635,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
         <div>
           <p class="pub-title en">Medical Officer, 1st Airborne Special Forces Brigade, ROK Army (Captain)</p>
           <p class="pub-title ko">제1공수특전여단 의무중대장 (군복무, 육군 대위)</p>
+          <p class="pub-title zh">韩国陆军第1空降特战旅军医（大尉，兵役）</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
@@ -576,6 +643,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
         <div>
           <p class="pub-title en">Clinical Fellow (Spine), Dept. of Orthopedic Surgery, Seoul National University Hospital</p>
           <p class="pub-title ko">서울대학교병원 정형외과 전임의 (척추)</p>
+          <p class="pub-title zh">首尔大学医院骨科专科研修医师（脊柱）</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
@@ -583,6 +651,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
         <div>
           <p class="pub-title en">Manager, Spine Center, Seoul 21st Century Hospital</p>
           <p class="pub-title ko">서울21세기병원 척추센터 과장</p>
+          <p class="pub-title zh">首尔21世纪医院脊柱中心科长</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
@@ -590,6 +659,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
         <div>
           <p class="pub-title en">Clinical Assistant Professor, Korea University Anam Hospital</p>
           <p class="pub-title ko">고려대학교 안암병원 임상교수</p>
+          <p class="pub-title zh">高丽大学安岩医院临床教授</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
@@ -597,6 +667,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
         <div>
           <p class="pub-title en">Cooperative Physician &amp; Clinical Advisor, SNUH / SMG-SNU Boramae / Bundang SNUH</p>
           <p class="pub-title ko">서울대학교병원 진료협력의 · 서울대학교병원/분당서울대학교병원/보라매병원 임상자문의</p>
+          <p class="pub-title zh">首尔大学医院协诊医师 · 首尔大学医院/盆唐首尔大学医院/首尔市立普拉梅医院临床顾问</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
@@ -604,6 +675,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
         <div>
           <p class="pub-title en">Certified Physician in Biomedical Informatics (CPBMI)</p>
           <p class="pub-title ko">정보의학인증의</p>
+          <p class="pub-title zh">生物医学信息学认证医师（CPBMI）</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
@@ -611,6 +683,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
         <div>
           <p class="pub-title en">Certified Sports Medicine Physician, The Korean Society of Sports Medicine</p>
           <p class="pub-title ko">대한스포츠의학회 인증전문의</p>
+          <p class="pub-title zh">大韩运动医学会认证专科医师</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
@@ -618,6 +691,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
         <div>
           <p class="pub-title en">Chief, Spine Endoscopy Center, Bumin Hospital Seoul</p>
           <p class="pub-title ko">서울부민병원 척추내시경센터장</p>
+          <p class="pub-title zh">首尔富民医院脊柱内镜中心主任</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
@@ -625,6 +699,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
         <div>
           <p class="pub-title en">General Manager, Division of Education and Research, Bumin Hospital Seoul</p>
           <p class="pub-title ko">서울부민병원 교육연구실장</p>
+          <p class="pub-title zh">首尔富民医院教育研究室长</p>
         </div>
       </div>
       <div class="pub-item" style="grid-template-columns:56px 1fr">
@@ -632,6 +707,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
         <div>
           <p class="pub-title en">Field Doctor, Kiwoom Heroes (KBO Professional Baseball)</p>
           <p class="pub-title ko">프로야구 키움히어로즈 필드닥터</p>
+          <p class="pub-title zh">韩国职业棒球（KBO）Kiwoom Heroes队随队医生</p>
         </div>
       </div>
     </div>
@@ -641,10 +717,13 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
 
 <!-- PUBLICATIONS -->
 <section class="section" id="publications">
-  <p class="sec-eye en">Academic output</p><p class="sec-eye ko">학술 성과</p>
+  <p class="sec-eye en">Academic output</p><p class="sec-eye ko">학술 성과</p><p class="sec-eye zh">学术成果</p>
   <h2 class="sec-title en">Publications (27)</h2>
   <h2 class="sec-title ko">논문 (27편)</h2>
+  <h2 class="sec-title zh">论文（27篇）</h2>
+  <p class="zh" style="font-size:13px;color:var(--text-2);margin:-16px 0 20px;">以下论文标题以英文/韩文列出，符合国际学术文献惯例。</p>
 
+  <div id="pub-list">
   <div class="pub-item"><span class="pub-yr">2026</span><div>
     <p class="pub-title en"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Park+SC+deep+learning+cervical+cord+compression+dynamic+radiograph" target="_blank" rel="noopener">Development and multi-institutional validation of a deep learning algorithm for predicting cervical cord compression using dynamic cervical lateral radiographs</a></p>
     <p class="pub-title ko"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Park+SC+deep+learning+cervical+cord+compression+dynamic+radiograph" target="_blank" rel="noopener">동적 경추 측면 방사선 사진을 이용한 경추 척수압박 예측 딥러닝 알고리즘 개발 및 다기관 검증</a></p>
@@ -860,14 +939,18 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
     <p class="pub-journal">The Knee · 2016</p>
     <div class="pub-links"><a class="pubmed-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=Na+YG+coronal+alignment+single-limb+stance+posterolateral+rotatory+instability+knee" target="_blank" rel="noopener">PubMed ↗</a></div>
   </div></div>
+  </div>
 </section>
 
 <!-- PRESENTATIONS -->
 <section class="section" id="presentations">
-  <p class="sec-eye en">Conference activity</p><p class="sec-eye ko">학술 활동</p>
+  <p class="sec-eye en">Conference activity</p><p class="sec-eye ko">학술 활동</p><p class="sec-eye zh">学术活动</p>
   <h2 class="sec-title en">Selected Presentations (40+)</h2>
   <h2 class="sec-title ko">주요 학술 발표 (40회 이상)</h2>
+  <h2 class="sec-title zh">主要学术报告（40次以上）</h2>
+  <p class="zh" style="font-size:13px;color:var(--text-2);margin:-16px 0 20px;">学术会议名称以英文/韩文列出。</p>
 
+  <div id="pres-list">
   <div class="pres-item"><span class="pres-yr">2026</span><div>
     <p class="pres-title en">Cervical Spine Research Society – Asia Pacific (CSRS-AP)</p>
     <p class="pres-title ko">경추연구학회 아시아태평양 연례학술대회</p>
@@ -928,22 +1011,25 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
   </div></div>
 
   <div class="pres-item"><span class="pres-yr">2021</span><div>
-    <p class="pres-title en">Asia Pacific Spine Society & Asia Pacific Paediatric Orthopaedic Society (APSS-APPOS 2021)</p>
+    <p class="pres-title en">Asia Pacific Spine Society &amp; Asia Pacific Paediatric Orthopaedic Society (APSS-APPOS 2021)</p>
     <p class="pres-title ko">아시아태평양 척추학회 및 아시아태평양 소아정형외과학회 (APSS-APPOS 2021)</p>
   </div></div>
+  </div>
 </section>
 
 <!-- AWARDS -->
 <section class="section" id="awards">
-  <p class="sec-eye en">Recognition</p><p class="sec-eye ko">수상 내역</p>
-  <h2 class="sec-title en">Awards & Honors</h2>
+  <p class="sec-eye en">Recognition</p><p class="sec-eye ko">수상 내역</p><p class="sec-eye zh">获奖情况</p>
+  <h2 class="sec-title en">Awards &amp; Honors</h2>
   <h2 class="sec-title ko">수상 및 장학</h2>
+  <h2 class="sec-title zh">获奖及奖学金</h2>
   <div class="award-grid">
     <div class="award-card award-gold">
       <span class="award-yr">2026</span>
       <div>
         <p class="award-name en">Best Paper Award</p>
         <p class="award-name ko">Best Paper Award</p>
+        <p class="award-name zh">最佳论文奖</p>
         <p class="award-org">CSRS-AP 2026 (Cervical Spine Research Society – Asia Pacific)</p>
       </div>
     </div>
@@ -952,6 +1038,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
       <div>
         <p class="award-name en">English Presentation Award — Gold Prize</p>
         <p class="award-name ko">영어발표상 금상</p>
+        <p class="award-name zh">英语演讲金奖</p>
         <p class="award-org">JSSR 2025 (Japanese Society for Spine Surgery and Related Research)</p>
       </div>
     </div>
@@ -960,8 +1047,10 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
       <div>
         <p class="award-name en">Best Paper Award</p>
         <p class="award-name ko">최우수논문상</p>
+        <p class="award-name zh">最优秀论文奖</p>
         <p class="award-org en">Korean Cervical Spine Research Society</p>
         <p class="award-org ko">대한경추연구학회</p>
+        <p class="award-org zh">大韩颈椎研究学会</p>
       </div>
     </div>
     <div class="award-card">
@@ -969,8 +1058,10 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
       <div>
         <p class="award-name en">Best Presentation Award (Academic Excellence)</p>
         <p class="award-name ko">학술상 (최우수연제상)</p>
+        <p class="award-name zh">学术奖（最优秀演讲奖）</p>
         <p class="award-org en">Korean Society of Sports Medicine (KOSSM 2025)</p>
         <p class="award-org ko">대한정형외과 스포츠의학회 (KOSSM 2025)</p>
+        <p class="award-org zh">大韩骨科运动医学会（KOSSM 2025）</p>
       </div>
     </div>
     <div class="award-card">
@@ -978,8 +1069,10 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
       <div>
         <p class="award-name en">Young Researcher Award · Asian Travelling Fellowship Award</p>
         <p class="award-name ko">젊은 연구자상 · Asian Travelling Fellowship Award</p>
+        <p class="award-name zh">青年研究者奖 · 亚洲旅行奖学金奖</p>
         <p class="award-org en">Korean Society of Spine Surgery</p>
         <p class="award-org ko">대한척추외과학회</p>
+        <p class="award-org zh">大韩脊柱外科学会</p>
       </div>
     </div>
     <div class="award-card">
@@ -987,8 +1080,10 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
       <div>
         <p class="award-name en">Academic Excellence Full Scholarship</p>
         <p class="award-name ko">성적우수 전액장학생</p>
+        <p class="award-name zh">优秀学业全额奖学金</p>
         <p class="award-org en">Yonsei University College of Medicine</p>
         <p class="award-org ko">연세대학교 의과대학</p>
+        <p class="award-org zh">延世大学医学院</p>
       </div>
     </div>
   </div>
@@ -996,104 +1091,126 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
 
 <!-- MEMBERSHIPS -->
 <section class="section" id="memberships">
-  <p class="sec-eye en">Professional affiliations</p><p class="sec-eye ko">학회 및 사회 활동</p>
-  <h2 class="sec-title en">Memberships & Editorial Roles</h2>
+  <p class="sec-eye en">Professional affiliations</p><p class="sec-eye ko">학회 및 사회 활동</p><p class="sec-eye zh">学会及社会活动</p>
+  <h2 class="sec-title en">Memberships &amp; Editorial Roles</h2>
   <h2 class="sec-title ko">학회 임원 및 편집 활동</h2>
+  <h2 class="sec-title zh">学会任职及编辑活动</h2>
   <div class="mem-grid">
     <div class="mem-item">
-      <p class="mem-role en">Editorial Board</p><p class="mem-role ko">편집위원</p>
+      <p class="mem-role en">Editorial Board</p><p class="mem-role ko">편집위원</p><p class="mem-role zh">编辑委员</p>
       <p class="mem-name en">KMISS (Korean Society of Minimally Invasive Spine Surgery)</p>
       <p class="mem-name ko">최소침습척추치료연구학회</p>
+      <p class="mem-name zh">大韩微创脊柱治疗研究学会（KMISS）</p>
     </div>
     <div class="mem-item">
-      <p class="mem-role en">International Committee</p><p class="mem-role ko">국제위원회 위원</p>
+      <p class="mem-role en">International Committee</p><p class="mem-role ko">국제위원회 위원</p><p class="mem-role zh">国际委员会委员</p>
       <p class="mem-name en">Korean Cervical Spine Research Society</p>
       <p class="mem-name ko">대한경추연구학회</p>
+      <p class="mem-name zh">大韩颈椎研究学会</p>
     </div>
     <div class="mem-item">
-      <p class="mem-role en">Academic Committee</p><p class="mem-role ko">학술위원</p>
+      <p class="mem-role en">Academic Committee</p><p class="mem-role ko">학술위원</p><p class="mem-role zh">学术委员</p>
       <p class="mem-name en">Korean Society of Sports Medicine</p>
       <p class="mem-name ko">대한정형외과스포츠의학회</p>
+      <p class="mem-name zh">大韩骨科运动医学会</p>
     </div>
     <div class="mem-item">
-      <p class="mem-role en">Insurance Committee</p><p class="mem-role ko">보험위원</p>
+      <p class="mem-role en">Insurance Committee</p><p class="mem-role ko">보험위원</p><p class="mem-role zh">保险委员</p>
       <p class="mem-name en">Korean Society of Orthopaedic Pain Medicine</p>
       <p class="mem-name ko">대한정형통증의학회</p>
+      <p class="mem-name zh">大韩骨科疼痛医学会</p>
     </div>
     <div class="mem-item">
-      <p class="mem-role en">Editorial Board</p><p class="mem-role ko">편집위원</p>
+      <p class="mem-role en">Editorial Board</p><p class="mem-role ko">편집위원</p><p class="mem-role zh">编辑委员</p>
       <p class="mem-name en">SPINA — Spine Specialty Magazine</p>
       <p class="mem-name ko">척추전문매거진 SPINA</p>
+      <p class="mem-name zh">脊柱专业杂志 SPINA</p>
     </div>
     <div class="mem-item">
-      <p class="mem-role en">Reviewer</p><p class="mem-role ko">심사위원</p>
+      <p class="mem-role en">Reviewer</p><p class="mem-role ko">심사위원</p><p class="mem-role zh">审稿人</p>
       <p class="mem-name">The Spine Journal · JOSR · J Clin Med · Medicina</p>
     </div>
     <div class="mem-item">
-      <p class="mem-role en">Member</p><p class="mem-role ko">정회원</p>
+      <p class="mem-role en">Member</p><p class="mem-role ko">정회원</p><p class="mem-role zh">正式会员</p>
       <p class="mem-name en">AO Spine International</p>
       <p class="mem-name ko">AO Spine 국제학회</p>
+      <p class="mem-name zh">AO Spine 国际学会</p>
     </div>
     <div class="mem-item">
-      <p class="mem-role en">Field Doctor (Former)</p><p class="mem-role ko">필드닥터 (전)</p>
+      <p class="mem-role en">Field Doctor (Former)</p><p class="mem-role ko">필드닥터 (전)</p><p class="mem-role zh">随队医生（曾任）</p>
       <p class="mem-name en">Kiwoom Heroes — KBO League</p>
       <p class="mem-name ko">프로야구 키움히어로즈</p>
+      <p class="mem-name zh">韩国职业棒球 Kiwoom Heroes 队</p>
     </div>
   </div>
 </section>
 
 <!-- BLOG / RSS -->
 <section class="section" id="blog">
-  <p class="sec-eye en">For patients & colleagues</p><p class="sec-eye ko">환자 및 동료를 위한 글</p>
+  <p class="sec-eye en">For patients &amp; colleagues</p><p class="sec-eye ko">환자 및 동료를 위한 글</p><p class="sec-eye zh">写给患者与同行</p>
   <h2 class="sec-title en">Latest from the blog</h2>
   <h2 class="sec-title ko">네이버 블로그 최신 글</h2>
+  <h2 class="sec-title zh">博客最新文章</h2>
   <div class="blog-grid" id="blog-grid">
     <p class="blog-loading en" style="grid-column:1/-1">Loading latest posts…</p>
     <p class="blog-loading ko" style="grid-column:1/-1">최신 글을 불러오는 중…</p>
+    <p class="blog-loading zh" style="grid-column:1/-1">正在加载最新文章…</p>
   </div>
   <p class="rss-note en">Posts are synced automatically from <a href="https://blog.naver.com/osspinepark" target="_blank" rel="noopener">Naver Blog (osspinepark)</a>.</p>
   <p class="rss-note ko">네이버 블로그에 새 글을 작성하면 이 섹션에 자동으로 반영됩니다. → <a href="https://blog.naver.com/osspinepark" target="_blank" rel="noopener">blog.naver.com/osspinepark</a></p>
+  <p class="rss-note zh">文章内容主要为韩文，自动同步自 <a href="https://blog.naver.com/osspinepark" target="_blank" rel="noopener">Naver 博客（osspinepark）</a>。</p>
 </section>
 
 <!-- FAQ -->
 <section class="section" id="faq">
-  <p class="sec-eye en">Common questions</p><p class="sec-eye ko">자주 묻는 질문</p>
+  <p class="sec-eye en">Common questions</p><p class="sec-eye ko">자주 묻는 질문</p><p class="sec-eye zh">常见问题</p>
   <h2 class="sec-title en">Frequently Asked Questions</h2>
   <h2 class="sec-title ko">자주 묻는 질문</h2>
+  <h2 class="sec-title zh">常见问题</h2>
 
   <div class="faq-item">
     <h3 class="faq-q en">Who is a spine specialist in Songpa-gu, Seoul?</h3>
     <h3 class="faq-q ko">송파구 척추전문의는 누구인가요?</h3>
+    <h3 class="faq-q zh">首尔松坡区的脊柱专科医生是谁？</h3>
     <p class="faq-a en">Sung Cheol Park, MD is an orthopedic spine surgeon and President of Seoul Bone One Hospital, located at 407 Baekjegobun-ro, Songpa-gu, Seoul. He specializes in uniportal endoscopic spine surgery and cervical spine conditions.</p>
     <p class="faq-a ko">박성철 원장은 서울특별시 송파구 백제고분로 407에 위치한 서울본원병원의 대표원장이자 척추 전문 정형외과 전문의입니다. 단일공내시경 척추수술과 경추 질환을 전문으로 진료합니다.</p>
+    <p class="faq-a zh">Sung Cheol Park（박성철）医生是骨科脊柱专科医生，现任首尔本源医院（位于首尔特别市松坡区百济古坟路407号）院长。专长为单孔内镜脊柱手术及颈椎疾病诊疗。</p>
   </div>
 
   <div class="faq-item">
     <h3 class="faq-q en">What is a spine endoscopy specialist (척추내시경 전문의)?</h3>
     <h3 class="faq-q ko">척추내시경 전문의란 무엇인가요?</h3>
+    <h3 class="faq-q zh">什么是脊柱内镜专科医生？</h3>
     <p class="faq-a en">A spine endoscopy specialist performs minimally invasive spine surgery using an endoscope inserted through a small incision, reducing tissue damage and recovery time compared to open surgery. Dr. Park specializes in uniportal endoscopic techniques including PSLD and FE-ULBD.</p>
     <p class="faq-a ko">척추내시경 전문의는 작은 절개를 통해 내시경을 삽입하여 최소 침습적으로 척추를 수술하는 전문의로, 기존 개방형 수술에 비해 조직 손상과 회복 기간을 줄일 수 있습니다. 박성철 원장은 PSLD, FE-ULBD 등 단일공내시경 술식을 전문으로 합니다.</p>
+    <p class="faq-a zh">脊柱内镜专科医生通过微小切口插入内镜，以微创方式完成脊柱手术，相较传统开放手术可减少组织损伤并缩短恢复期。Sung Cheol Park（박성철）医生专长于PSLD、FE-ULBD等单孔内镜技术。</p>
   </div>
 
   <div class="faq-item">
     <h3 class="faq-q en">What is PSLD spine surgery?</h3>
     <h3 class="faq-q ko">PSLD 척추수술이란 무엇인가요?</h3>
+    <h3 class="faq-q zh">什么是PSLD脊柱手术？</h3>
     <p class="faq-a en">PSLD (Percutaneous Stenoscopic Lumbar Decompression) is a uniportal endoscopic technique for treating lumbar spinal stenosis and disc herniation through a single small portal, performed under local anesthesia in many cases.</p>
     <p class="faq-a ko">PSLD(경피적 내시경 요추 감압술)는 단일 통로를 통해 요추 척추관협착증과 디스크 탈출증을 치료하는 단일공내시경 술식으로, 많은 경우 국소마취 하에 시행됩니다.</p>
+    <p class="faq-a zh">PSLD（经皮内镜下腰椎管减压术）是通过单一微小通道治疗腰椎管狭窄症与椎间盘突出的单孔内镜技术，多数情况下可在局部麻醉下进行。</p>
   </div>
 
   <div class="faq-item">
     <h3 class="faq-q en">Where is Seoul Bone One Hospital located?</h3>
     <h3 class="faq-q ko">서울본원병원은 어디에 있나요?</h3>
+    <h3 class="faq-q zh">首尔本源医院位于何处？</h3>
     <p class="faq-a en">Seoul Bone One Hospital is located at 407, Baekjegobun-ro, Songpa-gu, Seoul, Republic of Korea. Phone: +82-2-1644-0750.</p>
     <p class="faq-a ko">서울본원병원은 서울특별시 송파구 백제고분로 407에 위치해 있습니다. 전화: 02-1644-0750.</p>
+    <p class="faq-a zh">首尔本源医院位于韩国首尔特别市松坡区百济古坟路407号。电话：+82-2-1644-0750。</p>
   </div>
 
   <div class="faq-item">
     <h3 class="faq-q en">What are Dr. Park's academic credentials?</h3>
     <h3 class="faq-q ko">박성철 원장의 학력 및 경력은 어떻게 되나요?</h3>
+    <h3 class="faq-q zh">Sung Cheol Park（박성철）医生的学历及经历是怎样的？</h3>
     <p class="faq-a en">Dr. Park received his MD from Yonsei University College of Medicine and MSc in Orthopedics from Seoul National University. He previously served as Chief of the Spine Endoscopy Center at Seoul Bumin Hospital, and has authored 27 SCI-indexed publications.</p>
     <p class="faq-a ko">박성철 원장은 연세대학교 의과대학을 졸업하고 서울대학교에서 정형외과 석사 학위를 취득했습니다. 이전 서울부민병원 척추내시경센터장을 역임했으며, SCI 논문 27편을 발표했습니다.</p>
+    <p class="faq-a zh">Sung Cheol Park（박성철）医生毕业于延世大学医学院，并在首尔大学取得骨科学硕士学位。曾任首尔富民医院脊柱内镜中心主任，发表SCI(E)论文27篇。</p>
   </div>
 </section>
 
@@ -1102,6 +1219,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
   <p class="sec-eye">Contact</p>
   <h2 class="sec-title en">Get in touch</h2>
   <h2 class="sec-title ko">연락처</h2>
+  <h2 class="sec-title zh">联系方式</h2>
   <div class="contact-grid">
     <a class="contact-card" href="mailto:osspinepark@gmail.com">
       <div class="contact-icon">✉</div>
@@ -1117,17 +1235,34 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
       <div class="contact-icon">📝</div>
       <p class="contact-lbl en">Naver Blog</p>
       <p class="contact-lbl ko">네이버 블로그</p>
+      <p class="contact-lbl zh">Naver 博客</p>
       <p class="contact-val">osspinepark</p>
     </a>
     <a class="contact-card" href="tel:+82216440750">
       <div class="contact-icon">📞</div>
       <p class="contact-lbl en">Phone</p>
       <p class="contact-lbl ko">전화</p>
+      <p class="contact-lbl zh">电话</p>
       <p class="contact-val">02-1644-0750</p>
     </a>
+    <a class="contact-card" href="https://seoulboneone.com/" target="_blank" rel="noopener">
+      <div class="contact-icon">🏥</div>
+      <p class="contact-lbl en">Hospital Website</p>
+      <p class="contact-lbl ko">병원 홈페이지</p>
+      <p class="contact-lbl zh">医院官网</p>
+      <p class="contact-val">seoulboneone.com</p>
+    </a>
+    <a class="contact-card" href="https://naver.me/Fhustl3V" target="_blank" rel="noopener">
+      <div class="contact-icon">📍</div>
+      <p class="contact-lbl en">Naver Place</p>
+      <p class="contact-lbl ko">네이버플레이스</p>
+      <p class="contact-lbl zh">Naver 地图</p>
+      <p class="contact-val">Seoul Bone One Hospital</p>
+    </a>
   </div>
-  <p class="contact-address en"><strong>Seoul Bone One Hospital</strong> — 407, Baekjegobun-ro, Songpa-gu, Seoul, Republic of Korea</p>
-  <p class="contact-address ko"><strong>서울본원병원</strong> — 서울특별시 송파구 백제고분로 407</p>
+  <p class="contact-address en"><strong><a href="https://seoulboneone.com/" target="_blank" rel="noopener">Seoul Bone One Hospital</a></strong> — 407, Baekjegobun-ro, Songpa-gu, Seoul, Republic of Korea</p>
+  <p class="contact-address ko"><strong><a href="https://seoulboneone.com/" target="_blank" rel="noopener">서울본원병원</a></strong> — 서울특별시 송파구 백제고분로 407</p>
+  <p class="contact-address zh"><strong><a href="https://seoulboneone.com/" target="_blank" rel="noopener">首尔本源医院</a></strong> — 韩国首尔特别市松坡区百济古坟路407号</p>
 </section>
 
 </main>
@@ -1136,6 +1271,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
 <div class="entity-summary">
   <p class="en">Sung Cheol Park, MD (박성철 원장) is a board-certified orthopedic surgeon specializing in spine endoscopy, based in Songpa-gu, Seoul, South Korea. He is President of Seoul Bone One Hospital (서울본원병원), located at 407 Baekjegobun-ro, Songpa-gu, Seoul (phone: +82-2-1644-0750). He specializes in uniportal endoscopic spine surgery (PSLD, FE-ULBD), and was formerly Chief of the Spine Endoscopy Center at Seoul Bumin Hospital. He trained at Seoul National University Hospital, holds an MD from Yonsei University College of Medicine and an MSc in Orthopedics from Seoul National University, and is board-certified by the Korean Orthopaedic Association and the Korean Society of Spine Surgery. He has authored 27 SCI-indexed publications and received academic awards including the CSRS-AP 2026 Best Paper Award and the JSSR 2025 English Presentation Gold Prize. His research covers clinical outcomes of uniportal endoscopic spine surgery and deep learning-based spinal imaging AI for degenerative cervical myelopathy and spinal stenosis screening.</p>
   <p class="ko">박성철 원장(Sung Cheol Park, MD)은 서울특별시 송파구를 기반으로 진료하는 정형외과 전문의(척추 분야)입니다. 서울특별시 송파구 백제고분로 407에 위치한 서울본원병원의 대표원장이며(전화: 02-1644-0750), 단일공내시경 척추수술(PSLD, FE-ULBD)을 전문으로 합니다. 이전 서울부민병원 척추내시경센터장을 역임했으며, 서울대학교병원에서 수련을 마쳤습니다. 연세대학교 의과대학을 졸업하고 서울대학교에서 정형외과 의학석사 학위를 취득했으며, 대한정형외과학회 및 대한척추외과학회 전문의 자격을 보유하고 있습니다. SCI(E) 논문 27편을 발표했으며, CSRS-AP 2026 Best Paper Award, JSSR 2025 영어발표 금상 등의 학술상을 수상했습니다. 연구 분야는 단일공내시경 척추수술의 임상 결과 분석과, 퇴행성 경추 척수증·척추관 협착증 진단을 위한 딥러닝 기반 척추 영상 분석 AI입니다.</p>
+  <p class="zh">Sung Cheol Park（박성철）医生是韩国首尔特别市松坡区执业的骨科专科医生（脊柱专业），并持有专科医师资格认证。现任首尔本源医院（位于首尔特别市松坡区百济古坟路407号，电话：+82-2-1644-0750）院长，专长为单孔内镜脊柱手术（PSLD、FE-ULBD）。曾任首尔富民医院脊柱内镜中心主任，并在首尔大学医院完成专科培训。毕业于延世大学医学院，并在首尔大学取得骨科学硕士学位，持有大韩骨科学会及大韩脊柱外科学会专科医师资格。已发表SCI(E)论文27篇，并获得CSRS-AP 2026最佳论文奖、JSSR 2025英语演讲金奖等多项学术奖项。研究方向包括单孔内镜脊柱手术的临床疗效分析，以及应用于退行性颈椎脊髓病与椎管狭窄筛查的深度学习脊柱影像AI技术。</p>
 </div>
 
 <!-- VISITOR COUNTER -->
@@ -1149,6 +1285,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
   <div class="footer-inner">
     <p class="footer-copy en">© 2026 Sung Cheol Park, MD. All rights reserved.</p>
     <p class="footer-copy ko">© 2026 Sung Cheol Park, MD. All rights reserved.</p>
+    <p class="footer-copy zh">© 2026 Sung Cheol Park, MD. All rights reserved.</p>
   </div>
 </footer>
 
@@ -1189,12 +1326,16 @@ async function loadVisitor() {
 loadVisitor();
 function setLang(lang){
   document.body.classList.toggle('lang-ko', lang==='ko');
+  document.body.classList.toggle('lang-zh', lang==='zh');
   document.getElementById('btn-en').classList.toggle('active', lang==='en');
   document.getElementById('btn-ko').classList.toggle('active', lang==='ko');
+  document.getElementById('btn-zh').classList.toggle('active', lang==='zh');
+  document.documentElement.lang = lang;
   localStorage.setItem('lang', lang);
 }
 const saved = localStorage.getItem('lang');
 if(saved==='ko') setLang('ko');
+if(saved==='zh') setLang('zh');
 
 // Counter animation
 function animCount(el, target, dur){
