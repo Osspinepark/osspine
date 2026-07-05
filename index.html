@@ -263,7 +263,18 @@ nav{position:sticky;top:0;z-index:100;background:rgba(26,58,122,0.97);backdrop-f
 .award-org{font-size:12px;color:var(--text-2)}
 .award-gold{border-left:3px solid #c9a84c}
 
-/* MEMBERSHIPS */
+/* PRESS CARDS - image thumbnail style */
+.press-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.press-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:all .2s}
+.press-card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(26,58,122,.12);border-color:var(--accent-sky)}
+.press-thumb{width:100%;height:160px;overflow:hidden;background:var(--bg);flex-shrink:0}
+.press-thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .3s}
+.press-card:hover .press-thumb img{transform:scale(1.03)}
+.press-body{padding:12px 14px;flex:1;display:flex;flex-direction:column;gap:5px;border-top:1px solid var(--border)}
+.press-outlet-tag{font-size:10px;font-weight:700;color:var(--accent-sky);text-transform:uppercase;letter-spacing:.08em}
+.press-title{font-size:12px;color:var(--text);font-weight:500;line-height:1.55;flex:1}
+.press-date{font-size:11px;color:var(--text-3)}
+@media(max-width:720px){.press-grid{grid-template-columns:1fr}}
 .mem-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 .mem-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:14px 16px}
 .mem-role{font-size:12px;color:var(--accent-mid);margin-bottom:2px;font-weight:500}
@@ -371,8 +382,9 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
       <a href="#publications" class="en">Publications</a><a href="#publications" class="ko">논문</a><a href="#publications" class="zh">论文</a>
       <a href="#presentations" class="en">Presentations</a><a href="#presentations" class="ko">발표</a><a href="#presentations" class="zh">学术报告</a>
       <a href="#awards" class="en">Awards</a><a href="#awards" class="ko">수상</a><a href="#awards" class="zh">获奖</a>
-      <a href="#blog" class="en">Blog</a><a href="#blog" class="ko">블로그</a><a href="#blog" class="zh">博客</a>
       <a href="#media" class="en">Media</a><a href="#media" class="ko">방송</a><a href="#media" class="zh">媒体</a>
+      <a href="#press" class="en">Press</a><a href="#press" class="ko">언론보도</a><a href="#press" class="zh">媒体报道</a>
+      <a href="#blog" class="en">Blog</a><a href="#blog" class="ko">블로그</a><a href="#blog" class="zh">博客</a>
       <a href="#contact" class="en">Contact</a><a href="#contact" class="ko">연락처</a><a href="#contact" class="zh">联系方式</a>
     </div>
     <div class="lang-toggle">
@@ -1161,22 +1173,6 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
   </div>
 </section>
 
-<!-- BLOG / RSS -->
-<section class="section" id="blog">
-  <p class="sec-eye en">For patients &amp; colleagues</p><p class="sec-eye ko">환자 및 동료를 위한 글</p><p class="sec-eye zh">写给患者与同行</p>
-  <h2 class="sec-title en">Latest from the blog</h2>
-  <h2 class="sec-title ko">네이버 블로그 최신 글</h2>
-  <h2 class="sec-title zh">博客最新文章</h2>
-  <div class="blog-grid" id="blog-grid">
-    <p class="blog-loading en" style="grid-column:1/-1">Loading latest posts…</p>
-    <p class="blog-loading ko" style="grid-column:1/-1">최신 글을 불러오는 중…</p>
-    <p class="blog-loading zh" style="grid-column:1/-1">正在加载最新文章…</p>
-  </div>
-  <p class="rss-note en">Posts are synced automatically from <a href="https://blog.naver.com/osspinepark" target="_blank" rel="noopener">Naver Blog (osspinepark)</a>.</p>
-  <p class="rss-note ko">네이버 블로그에 새 글을 작성하면 이 섹션에 자동으로 반영됩니다. → <a href="https://blog.naver.com/osspinepark" target="_blank" rel="noopener">blog.naver.com/osspinepark</a></p>
-  <p class="rss-note zh">文章内容主要为韩文，自动同步自 <a href="https://blog.naver.com/osspinepark" target="_blank" rel="noopener">Naver 博客（osspinepark）</a>。</p>
-</section>
-
 <!-- MEDIA APPEARANCES -->
 <section class="section" id="media">
   <p class="sec-eye en">Media &amp; broadcast</p><p class="sec-eye ko">방송 및 미디어 출연</p><p class="sec-eye zh">媒体及广播出演</p>
@@ -1274,57 +1270,121 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
   <p class="rss-note zh">现任职务：<a href="https://seoulboneone.com/" target="_blank" rel="noopener">首尔本源医院院长</a>。以上部分视频拍摄于此前任职期间。</p>
 </section>
 
-<!-- FAQ -->
-<section class="section" id="faq">
-  <p class="sec-eye en">Common questions</p><p class="sec-eye ko">자주 묻는 질문</p><p class="sec-eye zh">常见问题</p>
-  <h2 class="sec-title en">Frequently Asked Questions</h2>
-  <h2 class="sec-title ko">자주 묻는 질문</h2>
-  <h2 class="sec-title zh">常见问题</h2>
+<!-- PRESS -->
+<section class="section" id="press">
+  <p class="sec-eye en">Press coverage</p><p class="sec-eye ko">언론 보도</p><p class="sec-eye zh">媒体报道</p>
+  <h2 class="sec-title en">In the Media</h2>
+  <h2 class="sec-title ko">언론 보도</h2>
+  <h2 class="sec-title zh">媒体报道</h2>
+  <div class="press-grid">
 
-  <div class="faq-item">
-    <h3 class="faq-q en">Who is a spine specialist in Songpa-gu, Seoul?</h3>
-    <h3 class="faq-q ko">송파구 척추전문의는 누구인가요?</h3>
-    <h3 class="faq-q zh">首尔松坡区的脊柱专科医生是谁？</h3>
-    <p class="faq-a en">Sung Cheol Park, MD is an orthopedic spine surgeon and President of Seoul Bone One Hospital, located at 407 Baekjegobun-ro, Songpa-gu, Seoul. He specializes in uniportal endoscopic spine surgery and cervical spine conditions.</p>
-    <p class="faq-a ko">박성철 원장은 서울특별시 송파구 백제고분로 407에 위치한 서울본원병원의 대표원장이자 척추 전문 정형외과 전문의입니다. 단일공내시경 척추수술과 경추 질환을 전문으로 진료합니다.</p>
-    <p class="faq-a zh">Sung Cheol Park（박성철）医生是骨科脊柱专科医生，现任首尔本源医院（位于首尔特别市松坡区百济古坟路407号）院长。专长为单孔内镜脊柱手术及颈椎疾病诊疗。</p>
-  </div>
+    <a class="press-card" href="https://www.edaily.co.kr/News/Read?newsId=04470646645384960" target="_blank" rel="noopener">
+      <div class="press-thumb"><img src="press2.png" alt="이데일리 CSRS-AP 2026"></div>
+      <div class="press-body">
+        <p class="press-outlet-tag">이데일리</p>
+        <p class="press-title en">Dr. Park Wins Best Paper Award at CSRS-AP 2026</p>
+        <p class="press-title ko">박성철 원장, 아시아태평양 경추연구학회 베스트 논문상 수상</p>
+        <p class="press-date">2026. 03. 19</p>
+      </div>
+    </a>
 
-  <div class="faq-item">
-    <h3 class="faq-q en">What is a spine endoscopy specialist (척추내시경 전문의)?</h3>
-    <h3 class="faq-q ko">척추내시경 전문의란 무엇인가요?</h3>
-    <h3 class="faq-q zh">什么是脊柱内镜专科医生？</h3>
-    <p class="faq-a en">A spine endoscopy specialist performs minimally invasive spine surgery using an endoscope inserted through a small incision, reducing tissue damage and recovery time compared to open surgery. Dr. Park specializes in uniportal endoscopic techniques including PSLD and FE-ULBD.</p>
-    <p class="faq-a ko">척추내시경 전문의는 작은 절개를 통해 내시경을 삽입하여 최소 침습적으로 척추를 수술하는 전문의로, 기존 개방형 수술에 비해 조직 손상과 회복 기간을 줄일 수 있습니다. 박성철 원장은 PSLD, FE-ULBD 등 단일공내시경 술식을 전문으로 합니다.</p>
-    <p class="faq-a zh">脊柱内镜专科医生通过微小切口插入内镜，以微创方式完成脊柱手术，相较传统开放手术可减少组织损伤并缩短恢复期。Sung Cheol Park（박성철）医生专长于PSLD、FE-ULBD等单孔内镜技术。</p>
-  </div>
+    <a class="press-card" href="http://www.bogunuilyo.com/news/501285" target="_blank" rel="noopener">
+      <div class="press-thumb"><img src="press1.png" alt="보건의료신문 백스터 워크숍"></div>
+      <div class="press-body">
+        <p class="press-outlet-tag">보건의료신문</p>
+        <p class="press-title en">Dr. Park Leads PSLD Surgical Education at Baxter Spine Endoscopy Workshop</p>
+        <p class="press-title ko">서울본원병원 박성철 대표원장, 백스터 척추내시경 워크숍서 PSLD 술기 교육</p>
+        <p class="press-date">2026</p>
+      </div>
+    </a>
 
-  <div class="faq-item">
-    <h3 class="faq-q en">What is PSLD spine surgery?</h3>
-    <h3 class="faq-q ko">PSLD 척추수술이란 무엇인가요?</h3>
-    <h3 class="faq-q zh">什么是PSLD脊柱手术？</h3>
-    <p class="faq-a en">PSLD (Percutaneous Stenoscopic Lumbar Decompression) is a uniportal endoscopic technique for treating lumbar spinal stenosis and disc herniation through a single small portal, performed under local anesthesia in many cases.</p>
-    <p class="faq-a ko">PSLD(경피적 내시경 요추 감압술)는 단일 통로를 통해 요추 척추관협착증과 디스크 탈출증을 치료하는 단일공내시경 술식으로, 많은 경우 국소마취 하에 시행됩니다.</p>
-    <p class="faq-a zh">PSLD（经皮内镜下腰椎管减压术）是通过单一微小通道治疗腰椎管狭窄症与椎间盘突出的单孔内镜技术，多数情况下可在局部麻醉下进行。</p>
-  </div>
+    <a class="press-card" href="https://www.thefirstmedia.net/news/articleView.html?idxno=188310" target="_blank" rel="noopener">
+      <div class="press-thumb"><img src="press3.png" alt="더퍼스트미디어 KMISS"></div>
+      <div class="press-body">
+        <p class="press-outlet-tag">더퍼스트미디어</p>
+        <p class="press-title en">Dr. Park Serves as Main Instructor at KMISS Cadaver Workshop</p>
+        <p class="press-title ko">박성철 원장, 대한척추외과학회 최소침습치료연구학회 실습지도강사로 참여</p>
+        <p class="press-date">2025. 12. 08</p>
+      </div>
+    </a>
 
-  <div class="faq-item">
-    <h3 class="faq-q en">Where is Seoul Bone One Hospital located?</h3>
-    <h3 class="faq-q ko">서울본원병원은 어디에 있나요?</h3>
-    <h3 class="faq-q zh">首尔本源医院位于何处？</h3>
-    <p class="faq-a en">Seoul Bone One Hospital is located at 407, Baekjegobun-ro, Songpa-gu, Seoul, Republic of Korea. Phone: +82-2-1644-0750.</p>
-    <p class="faq-a ko">서울본원병원은 서울특별시 송파구 백제고분로 407에 위치해 있습니다. 전화: 02-1644-0750.</p>
-    <p class="faq-a zh">首尔本源医院位于韩国首尔特别市松坡区百济古坟路407号。电话：+82-2-1644-0750。</p>
-  </div>
+    <a class="press-card" href="https://www.medworld.co.kr/news/articleView.html?idxno=251124" target="_blank" rel="noopener">
+      <div class="press-thumb"><img src="press4.png" alt="메드월드뉴스 KOSSM"></div>
+      <div class="press-body">
+        <p class="press-outlet-tag">메드월드뉴스</p>
+        <p class="press-title en">Dr. Park Wins Excellence Award at KOSSM 2025</p>
+        <p class="press-title ko">박성철 원장, 대한정형외과 스포츠의학회 최우수학술상 수상</p>
+        <p class="press-date">2025. 10. 01</p>
+      </div>
+    </a>
 
-  <div class="faq-item">
-    <h3 class="faq-q en">What are Dr. Park's academic credentials?</h3>
-    <h3 class="faq-q ko">박성철 원장의 학력 및 경력은 어떻게 되나요?</h3>
-    <h3 class="faq-q zh">Sung Cheol Park（박성철）医生的学历及经历是怎样的？</h3>
-    <p class="faq-a en">Dr. Park received his MD from Yonsei University College of Medicine and MSc in Orthopedics from Seoul National University. He previously served as Chief of the Spine Endoscopy Center at Seoul Bumin Hospital, and has authored 27 SCI-indexed publications.</p>
-    <p class="faq-a ko">박성철 원장은 연세대학교 의과대학을 졸업하고 서울대학교에서 정형외과 석사 학위를 취득했습니다. 이전 서울부민병원 척추내시경센터장을 역임했으며, SCI 논문 27편을 발표했습니다.</p>
-    <p class="faq-a zh">Sung Cheol Park（박성철）医生毕业于延世大学医学院，并在首尔大学取得骨科学硕士学位。曾任首尔富民医院脊柱内镜中心主任，发表SCI(E)论文27篇。</p>
+    <a class="press-card" href="https://www.asiatoday.co.kr/kn/view.php?key=20250424010014994" target="_blank" rel="noopener">
+      <div class="press-thumb"><img src="press5.png" alt="아시아투데이 JSSR 2025"></div>
+      <div class="press-body">
+        <p class="press-outlet-tag">아시아투데이</p>
+        <p class="press-title en">Dr. Park Wins Gold Award at JSSR 2025, Japan</p>
+        <p class="press-title ko">박성철 원장, 일본 국제학술대회 최고발표상(Gold Award) 수상</p>
+        <p class="press-date">2025. 04. 24</p>
+      </div>
+    </a>
+
+    <a class="press-card" href="https://www.bosa.co.kr/news/articleView.html?idxno=2246030" target="_blank" rel="noopener">
+      <div class="press-thumb"><img src="press6.png" alt="의학신문 CSRS-AP 2025"></div>
+      <div class="press-body">
+        <p class="press-outlet-tag">의학신문</p>
+        <p class="press-title en">Dr. Park Invited to Present at CSRS-AP 2025</p>
+        <p class="press-title ko">박성철 원장, 아시아태평양 경추연구학회 초청 강연</p>
+        <p class="press-date">2025. 04. 08</p>
+      </div>
+    </a>
+
+    <a class="press-card" href="https://www.edaily.co.kr/News/Read?newsId=03978646642100040" target="_blank" rel="noopener">
+      <div class="press-thumb"><img src="press7.png" alt="이데일리 척추내시경 심포지엄"></div>
+      <div class="press-body">
+        <p class="press-outlet-tag">이데일리</p>
+        <p class="press-title en">Dr. Park Presents at 3rd Spine Endoscopy Symposium</p>
+        <p class="press-title ko">박성철 원장, 척추내시경 심포지엄서 내시경 수술기법 발표</p>
+        <p class="press-date">2025. 03. 04</p>
+      </div>
+    </a>
+
+    <a class="press-card" href="https://www.medicaltimes.com/Main/News/NewsView.html?ID=1161495" target="_blank" rel="noopener">
+      <div class="press-thumb"><img src="press8.png" alt="메디칼타임즈 SNU 심포지엄"></div>
+      <div class="press-body">
+        <p class="press-outlet-tag">메디칼타임즈</p>
+        <p class="press-title en">Dr. Park Presents at SNU Orthopaedic Update SPINE Symposium</p>
+        <p class="press-title ko">박성철 원장, 척추내시경치료 연구결과 발표</p>
+        <p class="press-date">2024. 11. 28</p>
+      </div>
+    </a>
+
+    <a class="press-card" href="https://www.thefirstmedia.net/news/articleView.html?idxno=146457" target="_blank" rel="noopener">
+      <div class="press-thumb"><img src="press9.png" alt="더퍼스트미디어 젊은연구자상"></div>
+      <div class="press-body">
+        <p class="press-outlet-tag">더퍼스트미디어</p>
+        <p class="press-title en">Dr. Park Wins Young Researcher Award at KSSS 2024</p>
+        <p class="press-title ko">박성철 원장, 대한척추외과학회 젊은 연구자상 수상</p>
+        <p class="press-date">2024. 05. 28</p>
+      </div>
+    </a>
+
   </div>
+</section>
+
+<!-- BLOG / RSS -->
+<section class="section" id="blog">
+  <p class="sec-eye en">For patients &amp; colleagues</p><p class="sec-eye ko">환자 및 동료를 위한 글</p><p class="sec-eye zh">写给患者与同行</p>
+  <h2 class="sec-title en">Latest from the blog</h2>
+  <h2 class="sec-title ko">네이버 블로그 최신 글</h2>
+  <h2 class="sec-title zh">博客最新文章</h2>
+  <div class="blog-grid" id="blog-grid">
+    <p class="blog-loading en" style="grid-column:1/-1">Loading latest posts…</p>
+    <p class="blog-loading ko" style="grid-column:1/-1">최신 글을 불러오는 중…</p>
+    <p class="blog-loading zh" style="grid-column:1/-1">正在加载最新文章…</p>
+  </div>
+  <p class="rss-note en">Posts are synced automatically from <a href="https://blog.naver.com/osspinepark" target="_blank" rel="noopener">Naver Blog (osspinepark)</a>.</p>
+  <p class="rss-note ko">네이버 블로그에 새 글을 작성하면 이 섹션에 자동으로 반영됩니다. → <a href="https://blog.naver.com/osspinepark" target="_blank" rel="noopener">blog.naver.com/osspinepark</a></p>
+  <p class="rss-note zh">文章内容主要为韩文，自动同步自 <a href="https://blog.naver.com/osspinepark" target="_blank" rel="noopener">Naver 博客（osspinepark）</a>。</p>
 </section>
 
 <!-- CONTACT -->
@@ -1380,6 +1440,62 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
       <p class="contact-val">Seoul Bone One Hospital</p>
     </a>
   </div>
+
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <p class="sec-eye en">Common questions</p><p class="sec-eye ko">자주 묻는 질문</p><p class="sec-eye zh">常见问题</p>
+  <h2 class="sec-title en">Frequently Asked Questions</h2>
+  <h2 class="sec-title ko">자주 묻는 질문</h2>
+  <h2 class="sec-title zh">常见问题</h2>
+
+  <div class="faq-item">
+    <h3 class="faq-q en">Who is a spine specialist in Songpa-gu, Seoul?</h3>
+    <h3 class="faq-q ko">송파구 척추전문의는 누구인가요?</h3>
+    <h3 class="faq-q zh">首尔松坡区的脊柱专科医生是谁？</h3>
+    <p class="faq-a en">Sung Cheol Park, MD is an orthopedic spine surgeon and President of Seoul Bone One Hospital, located at 407 Baekjegobun-ro, Songpa-gu, Seoul. He specializes in uniportal endoscopic spine surgery and cervical spine conditions.</p>
+    <p class="faq-a ko">박성철 원장은 서울특별시 송파구 백제고분로 407에 위치한 서울본원병원의 대표원장이자 척추 전문 정형외과 전문의입니다. 단일공내시경 척추수술과 경추 질환을 전문으로 진료합니다.</p>
+    <p class="faq-a zh">Sung Cheol Park（박성철）医生是骨科脊柱专科医生，现任首尔本源医院（位于首尔特别市松坡区百济古坟路407号）院长。专长为单孔内镜脊柱手术及颈椎疾病诊疗。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3 class="faq-q en">What is a spine endoscopy specialist (척추내시경 전문의)?</h3>
+    <h3 class="faq-q ko">척추내시경 전문의란 무엇인가요?</h3>
+    <h3 class="faq-q zh">什么是脊柱内镜专科医生？</h3>
+    <p class="faq-a en">A spine endoscopy specialist performs minimally invasive spine surgery using an endoscope inserted through a small incision, reducing tissue damage and recovery time compared to open surgery. Dr. Park specializes in uniportal endoscopic techniques including PSLD and FE-ULBD.</p>
+    <p class="faq-a ko">척추내시경 전문의는 작은 절개를 통해 내시경을 삽입하여 최소 침습적으로 척추를 수술하는 전문의로, 기존 개방형 수술에 비해 조직 손상과 회복 기간을 줄일 수 있습니다. 박성철 원장은 PSLD, FE-ULBD 등 단일공내시경 술식을 전문으로 합니다.</p>
+    <p class="faq-a zh">脊柱内镜专科医生通过微小切口插入内镜，以微创方式完成脊柱手术，相较传统开放手术可减少组织损伤并缩短恢复期。Sung Cheol Park（박성철）医生专长于PSLD、FE-ULBD等单孔内镜技术。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3 class="faq-q en">What is PSLD spine surgery?</h3>
+    <h3 class="faq-q ko">PSLD 척추수술이란 무엇인가요?</h3>
+    <h3 class="faq-q zh">什么是PSLD脊柱手术？</h3>
+    <p class="faq-a en">PSLD (Percutaneous Stenoscopic Lumbar Decompression) is a uniportal endoscopic technique for treating lumbar spinal stenosis and disc herniation through a single small portal, performed under local anesthesia in many cases.</p>
+    <p class="faq-a ko">PSLD(경피적 내시경 요추 감압술)는 단일 통로를 통해 요추 척추관협착증과 디스크 탈출증을 치료하는 단일공내시경 술식으로, 많은 경우 국소마취 하에 시행됩니다.</p>
+    <p class="faq-a zh">PSLD（经皮内镜下腰椎管减压术）是通过单一微小通道治疗腰椎管狭窄症与椎间盘突出的单孔内镜技术，多数情况下可在局部麻醉下进行。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3 class="faq-q en">Where is Seoul Bone One Hospital located?</h3>
+    <h3 class="faq-q ko">서울본원병원은 어디에 있나요?</h3>
+    <h3 class="faq-q zh">首尔本源医院位于何处？</h3>
+    <p class="faq-a en">Seoul Bone One Hospital is located at 407, Baekjegobun-ro, Songpa-gu, Seoul, Republic of Korea. Phone: +82-2-1644-0750.</p>
+    <p class="faq-a ko">서울본원병원은 서울특별시 송파구 백제고분로 407에 위치해 있습니다. 전화: 02-1644-0750.</p>
+    <p class="faq-a zh">首尔本源医院位于韩国首尔特别市松坡区百济古坟路407号。电话：+82-2-1644-0750。</p>
+  </div>
+
+  <div class="faq-item">
+    <h3 class="faq-q en">What are Dr. Park's academic credentials?</h3>
+    <h3 class="faq-q ko">박성철 원장의 학력 및 경력은 어떻게 되나요?</h3>
+    <h3 class="faq-q zh">Sung Cheol Park（박성철）医生的学历及经历是怎样的？</h3>
+    <p class="faq-a en">Dr. Park received his MD from Yonsei University College of Medicine and MSc in Orthopedics from Seoul National University. He previously served as Chief of the Spine Endoscopy Center at Seoul Bumin Hospital, and has authored 27 SCI-indexed publications.</p>
+    <p class="faq-a ko">박성철 원장은 연세대학교 의과대학을 졸업하고 서울대학교에서 정형외과 석사 학위를 취득했습니다. 이전 서울부민병원 척추내시경센터장을 역임했으며, SCI 논문 27편을 발표했습니다.</p>
+    <p class="faq-a zh">Sung Cheol Park（박성철）医生毕业于延世大学医学院，并在首尔大学取得骨科学硕士学位。曾任首尔富民医院脊柱内镜中心主任，发表SCI(E)论文27篇。</p>
+  </div>
+</section>
+
+
   <p class="contact-address en"><strong><a href="https://seoulboneone.com/" target="_blank" rel="noopener">Seoul Bone One Hospital</a></strong> — 407, Baekjegobun-ro, Songpa-gu, Seoul, Republic of Korea</p>
   <p class="contact-address ko"><strong><a href="https://seoulboneone.com/" target="_blank" rel="noopener">서울본원병원</a></strong> — 서울특별시 송파구 백제고분로 407</p>
   <p class="contact-address zh"><strong><a href="https://seoulboneone.com/" target="_blank" rel="noopener">首尔本源医院</a></strong> — 韩国首尔特别市松坡区百济古坟路407号</p>
@@ -1392,6 +1508,13 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
   <p class="en">Sung Cheol Park, MD (박성철 원장) is a board-certified orthopedic surgeon specializing in spine endoscopy, based in Songpa-gu, Seoul, South Korea. He is President of Seoul Bone One Hospital (서울본원병원), located at 407 Baekjegobun-ro, Songpa-gu, Seoul (phone: +82-2-1644-0750). He specializes in uniportal endoscopic spine surgery (PSLD, FE-ULBD), and was formerly Chief of the Spine Endoscopy Center at Seoul Bumin Hospital. He trained at Seoul National University Hospital, holds an MD from Yonsei University College of Medicine and an MSc in Orthopedics from Seoul National University, and is board-certified by the Korean Orthopaedic Association and the Korean Society of Spine Surgery. He has authored 27 SCI-indexed publications and received academic awards including the CSRS-AP 2026 Best Paper Award and the JSSR 2025 English Presentation Gold Prize. His research covers clinical outcomes of uniportal endoscopic spine surgery and deep learning-based spinal imaging AI for degenerative cervical myelopathy and spinal stenosis screening.</p>
   <p class="ko">박성철 원장(Sung Cheol Park, MD)은 서울특별시 송파구를 기반으로 진료하는 정형외과 전문의(척추 분야)입니다. 서울특별시 송파구 백제고분로 407에 위치한 서울본원병원의 대표원장이며(전화: 02-1644-0750), 단일공내시경 척추수술(PSLD, FE-ULBD)을 전문으로 합니다. 이전 서울부민병원 척추내시경센터장을 역임했으며, 서울대학교병원에서 수련을 마쳤습니다. 연세대학교 의과대학을 졸업하고 서울대학교에서 정형외과 의학석사 학위를 취득했으며, 대한정형외과학회 및 대한척추외과학회 전문의 자격을 보유하고 있습니다. SCI(E) 논문 27편을 발표했으며, CSRS-AP 2026 Best Paper Award, JSSR 2025 영어발표 금상 등의 학술상을 수상했습니다. 연구 분야는 단일공내시경 척추수술의 임상 결과 분석과, 퇴행성 경추 척수증·척추관 협착증 진단을 위한 딥러닝 기반 척추 영상 분석 AI입니다.</p>
   <p class="zh">Sung Cheol Park（박성철）医生是韩国首尔特别市松坡区执业的骨科专科医生（脊柱专业），并持有专科医师资格认证。现任首尔本源医院（位于首尔特别市松坡区百济古坟路407号，电话：+82-2-1644-0750）院长，专长为单孔内镜脊柱手术（PSLD、FE-ULBD）。曾任首尔富民医院脊柱内镜中心主任，并在首尔大学医院完成专科培训。毕业于延世大学医学院，并在首尔大学取得骨科学硕士学位，持有大韩骨科学会及大韩脊柱外科学会专科医师资格。已发表SCI(E)论文27篇，并获得CSRS-AP 2026最佳论文奖、JSSR 2025英语演讲金奖等多项学术奖项。研究方向包括单孔内镜脊柱手术的临床疗效分析，以及应用于退行性颈椎脊髓病与椎管狭窄筛查的深度学习脊柱影像AI技术。</p>
+</div>
+
+<!-- VISITOR COUNTER -->
+<div class="visitor-bar">
+  <div class="visitor-inner">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fosspine.me&count_bg=%2300aadc&title_bg=%231a3a7a&icon=&title=Total%20%7C%20Today&edge_flat=true" alt="visitor count" style="height:20px;">
+  </div>
 </div>
 
 <!-- VISITOR COUNTER -->
