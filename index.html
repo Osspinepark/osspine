@@ -379,12 +379,16 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
     <div class="hero-slide"><img src="slide3.jpg" alt="KSSS 2026" style="object-position:center top;"></div>
     <div class="hero-slide"><img src="slide4.jpg" alt="KSSS 2024 Award" style="object-position:60% center;"></div>
     <div class="hero-slide"><img src="slide1.jpg" alt="Spine Endoscopy" style="object-position:center top;"></div>
+    <div class="hero-slide"><img src="slide6.jpg" alt="Spine Endoscopy Training" style="object-position:center center;"></div>
+    <div class="hero-slide"><img src="slide7.jpg" alt="Academic Presentation" style="object-position:center center;"></div>
     <div class="hero-slide-dots">
       <div class="hero-dot active" onclick="goSlide(0)"></div>
       <div class="hero-dot" onclick="goSlide(1)"></div>
       <div class="hero-dot" onclick="goSlide(2)"></div>
       <div class="hero-dot" onclick="goSlide(3)"></div>
       <div class="hero-dot" onclick="goSlide(4)"></div>
+      <div class="hero-dot" onclick="goSlide(5)"></div>
+      <div class="hero-dot" onclick="goSlide(6)"></div>
     </div>
   </div>
   <div>
@@ -1252,6 +1256,13 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
       <p class="contact-lbl zh">医院官网</p>
       <p class="contact-val">seoulboneone.com</p>
     </a>
+    <a class="contact-card" href="https://maps.app.goo.gl/Y7FkstpJvtKYjQcN7" target="_blank" rel="noopener">
+      <div class="contact-icon">🗺️</div>
+      <p class="contact-lbl en">Google Maps</p>
+      <p class="contact-lbl ko">구글 지도</p>
+      <p class="contact-lbl zh">Google 地图</p>
+      <p class="contact-val">Seoul Bone One Hospital</p>
+    </a>
     <a class="contact-card" href="https://naver.me/Fhustl3V" target="_blank" rel="noopener">
       <div class="contact-icon">📍</div>
       <p class="contact-lbl en">Naver Place</p>
@@ -1301,7 +1312,7 @@ function goSlide(n) {
   slides[curSlide].classList.add('active');
   dots[curSlide].classList.add('active');
 }
-setInterval(() => goSlide(curSlide + 1), 4000);
+setInterval(() => goSlide(curSlide + 1), 2500);
 
 // Visitor counter (hits.seeyoufarm.com)
 async function loadVisitor() {
@@ -1361,19 +1372,36 @@ const obs=new IntersectionObserver(es=>{
 },{threshold:0.3});
 obs.observe(document.querySelector('.stats-bar'));
 
-// RSS — Naver Blog (improved)
-const RSS='https://rss.blog.naver.com/osspinepark.xml';
-const PROXIES=['https://api.allorigins.win/get?url=','https://api.codetabs.com/v1/proxy?quest='];
+// RSS — Naver Blog (rss2json API)
 async function loadBlog(){
   const grid=document.getElementById('blog-grid');
-  for(const proxy of PROXIES){
+  const RSS='https://rss.blog.naver.com/osspinepark.xml';
+  const API='https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(RSS)+'&api_key=&count=4';
+  try{
+    const res=await fetch(API);
+    if(!res.ok) throw new Error('API error');
+    const data=await res.json();
+    if(data.status!=='ok'||!data.items?.length) throw new Error('No items');
+    grid.innerHTML=data.items.map(item=>{
+      const title=item.title||'';
+      const link=item.link||'#';
+      const date=item.pubDate||'';
+      const desc=(item.description||'').replace(/<[^>]+>/g,'').replace(/&[a-z]+;/g,' ').trim().slice(0,90)+'…';
+      const fd=date?new Date(date).toLocaleDateString('ko-KR',{year:'numeric',month:'long',day:'numeric'}):'';
+      return`<a class="blog-card" href="${link}" target="_blank" rel="noopener">
+        <p class="blog-date">${fd}</p>
+        <p class="blog-title">${title}</p>
+        <p class="blog-desc">${desc}</p>
+      </a>`;
+    }).join('');
+  }catch(e){
+    // Fallback: try allorigins proxy
     try{
-      const res=await fetch(proxy+encodeURIComponent(RSS));
-      const data=await res.json();
-      const content=data.contents||data;
-      const xml=new DOMParser().parseFromString(typeof content==='string'?content:JSON.stringify(content),'text/xml');
+      const res2=await fetch('https://api.allorigins.win/get?url='+encodeURIComponent(RSS));
+      const data2=await res2.json();
+      const xml=new DOMParser().parseFromString(data2.contents,'text/xml');
       const items=Array.from(xml.querySelectorAll('item')).slice(0,4);
-      if(!items.length) continue;
+      if(!items.length) throw new Error('empty');
       grid.innerHTML=items.map(item=>{
         const title=item.querySelector('title')?.textContent||'';
         const link=item.querySelector('link')?.textContent||'#';
@@ -1386,12 +1414,12 @@ async function loadBlog(){
           <p class="blog-desc">${desc}</p>
         </a>`;
       }).join('');
-      return;
-    }catch(e){continue;}
+    }catch{
+      grid.innerHTML=`
+        <p class="blog-loading en" style="grid-column:1/-1">Visit <a href="https://blog.naver.com/osspinepark" target="_blank" style="color:var(--accent-sky)">blog.naver.com/osspinepark</a> for the latest posts.</p>
+        <p class="blog-loading ko" style="grid-column:1/-1">최신 글은 <a href="https://blog.naver.com/osspinepark" target="_blank" style="color:var(--accent-sky)">blog.naver.com/osspinepark</a>에서 확인하세요.</p>`;
+    }
   }
-  grid.innerHTML=`
-    <p class="blog-loading en" style="grid-column:1/-1">Visit <a href="https://blog.naver.com/osspinepark" target="_blank" style="color:var(--accent-sky)">blog.naver.com/osspinepark</a> for the latest posts.</p>
-    <p class="blog-loading ko" style="grid-column:1/-1">최신 글은 <a href="https://blog.naver.com/osspinepark" target="_blank" style="color:var(--accent-sky)">blog.naver.com/osspinepark</a>에서 확인하세요.</p>`;
 }
 loadBlog();
 </script>
