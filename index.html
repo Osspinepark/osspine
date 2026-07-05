@@ -279,6 +279,16 @@ nav{position:sticky;top:0;z-index:100;background:rgba(26,58,122,0.97);backdrop-f
 .blog-loading{color:var(--text-3);font-size:14px;padding:20px 0}
 .rss-note{font-size:12px;color:var(--text-3);margin-top:16px}
 .rss-note a{color:var(--accent-sky)}
+.media-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.media-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.media-video{position:relative;width:100%;padding-top:56.25%;background:#000}
+.media-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.media-body{padding:16px 18px}
+.media-meta{font-size:11px;color:var(--text-3);margin-bottom:6px}
+.media-title{font-size:14px;color:var(--text);font-weight:500;line-height:1.5;margin-bottom:6px}
+.media-desc{font-size:13px;color:var(--text-2);line-height:1.6}
+.media-affil-note{font-size:12px;color:var(--text-3);margin-top:8px;font-style:italic}
+.media-cohost{font-size:12px;color:var(--accent-sky);margin-top:4px;font-weight:500}
 
 /* FAQ */
 .faq-item{border-bottom:1px solid var(--border);padding:18px 0}
@@ -343,6 +353,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
   .stat-item:nth-child(2){border-right:none}
   .hi-grid,.award-grid,.mem-grid,.contact-grid{grid-template-columns:1fr}
   .blog-grid{grid-template-columns:1fr}
+  .media-grid{grid-template-columns:1fr}
   .main{padding:0 20px 60px}
   .pub-item,.pres-item{grid-template-columns:44px 1fr;gap:0 10px}
 }
@@ -361,6 +372,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
       <a href="#presentations" class="en">Presentations</a><a href="#presentations" class="ko">발표</a><a href="#presentations" class="zh">学术报告</a>
       <a href="#awards" class="en">Awards</a><a href="#awards" class="ko">수상</a><a href="#awards" class="zh">获奖</a>
       <a href="#blog" class="en">Blog</a><a href="#blog" class="ko">블로그</a><a href="#blog" class="zh">博客</a>
+      <a href="#media" class="en">Media</a><a href="#media" class="ko">방송</a><a href="#media" class="zh">媒体</a>
       <a href="#contact" class="en">Contact</a><a href="#contact" class="ko">연락처</a><a href="#contact" class="zh">联系方式</a>
     </div>
     <div class="lang-toggle">
@@ -1163,6 +1175,103 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:24px
   <p class="rss-note en">Posts are synced automatically from <a href="https://blog.naver.com/osspinepark" target="_blank" rel="noopener">Naver Blog (osspinepark)</a>.</p>
   <p class="rss-note ko">네이버 블로그에 새 글을 작성하면 이 섹션에 자동으로 반영됩니다. → <a href="https://blog.naver.com/osspinepark" target="_blank" rel="noopener">blog.naver.com/osspinepark</a></p>
   <p class="rss-note zh">文章内容主要为韩文，自动同步自 <a href="https://blog.naver.com/osspinepark" target="_blank" rel="noopener">Naver 博客（osspinepark）</a>。</p>
+</section>
+
+<!-- MEDIA APPEARANCES -->
+<section class="section" id="media">
+  <p class="sec-eye en">Media &amp; broadcast</p><p class="sec-eye ko">방송 및 미디어 출연</p><p class="sec-eye zh">媒体及广播出演</p>
+  <h2 class="sec-title en">Media Appearances</h2>
+  <h2 class="sec-title ko">방송·미디어 출연</h2>
+  <h2 class="sec-title zh">媒体出演</h2>
+
+  <div class="media-grid">
+
+    <div class="media-card">
+      <div class="media-video">
+        <iframe src="https://www.youtube.com/embed/ZyB_usDVB5w" title="의학채널 비온뒤 - 척추 주사치료" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="media-body">
+        <p class="media-meta">의학채널 비온뒤 · 2025.11</p>
+        <p class="media-title en">Everything About Spinal Injection Therapy</p>
+        <p class="media-title ko">척추 주사치료의 모든 것을 알려드립니다</p>
+        <p class="media-title zh">全面解析脊柱注射治疗</p>
+        <p class="media-desc en">A walkthrough of spinal injection therapy (e.g., epidural nerve block) as a non-surgical option, including which type suits which symptoms, precautions, and answers to common questions such as "How many injections are safe?" and "Can injections alone replace surgery?" Useful for those with low back pain, leg pain, numbness, or radiating pain.</p>
+        <p class="media-desc ko">경막외 신경차단술 등 척추 주사치료를 비수술적 치료 옵션으로 알기 쉽게 설명하고, 환자 상태별로 적합한 주사 종류와 주의사항, "주사치료는 몇 번까지 맞아도 되나요?", "수술 대신 주사만으로 나을 수 있나요?" 같은 자주 묻는 질문에 답합니다. 허리 통증, 다리 통증, 저림, 방사통으로 고생하시는 분들이 참고하시면 좋습니다.</p>
+        <p class="media-desc zh">介绍脊柱注射治疗（如硬膜外神经阻滞术）作为非手术选择的原理，说明不同症状适合的注射类型与注意事项，并解答"最多能打几次""能否只靠注射代替手术"等常见问题。适合有腰痛、腿痛、麻木或放射痛困扰的患者参考。</p>
+        <p class="media-affil-note en">Recorded while serving at the Spine Endoscopy Center, Seoul Bumin Hospital.</p>
+        <p class="media-affil-note ko">서울부민병원 척추내시경센터 재직 당시 촬영.</p>
+        <p class="media-affil-note zh">拍摄时任职于首尔富民医院脊柱内镜中心。</p>
+      </div>
+    </div>
+
+    <div class="media-card">
+      <div class="media-video">
+        <iframe src="https://www.youtube.com/embed/JCLDG5TkDA4" title="의학채널 비온뒤 - 척추압박골절" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="media-body">
+        <p class="media-meta">의학채널 비온뒤 · [척추 하브루타] 1편 · 2025.11</p>
+        <p class="media-title en">Spinal Compression Fracture — Case-Based Discussion</p>
+        <p class="media-title ko">척추압박골절 — 증례 중심 대담</p>
+        <p class="media-title zh">脊柱压缩性骨折——病例讨论</p>
+        <p class="media-desc en">Part of the "Spine Havruta" case-discussion series. Covers spinal compression fractures common in older adults and those with osteoporosis, walking through real patient cases — from simple fractures treated with cement augmentation (vertebroplasty) to more complex cases requiring fusion surgery — and the risks of delaying treatment, such as chronic pain and spinal deformity.</p>
+        <p class="media-desc ko">"척추 하브루타" 증례 토론 시리즈 1편. 고령층과 골다공증 환자에게 흔한 척추압박골절을 실제 환자 증례를 통해 다룹니다. 단순 압박골절의 시멘트 시술(척추체 성형술)부터 유합술이 필요한 복잡한 사례까지 살펴보고, 치료 시기를 놓쳤을 때 발생할 수 있는 만성 통증·척추 변형 등의 문제를 설명합니다.</p>
+        <p class="media-desc zh">"脊柱哈弗鲁塔"病例讨论系列第1期。通过真实病例介绍老年人及骨质疏松症患者常见的脊柱压缩性骨折，从水泥强化手术（椎体成形术）到需要融合手术的复杂病例，并说明延误治疗可能导致的慢性疼痛与脊柱变形等问题。</p>
+        <p class="media-cohost en">Co-hosted with Dr. Sang-su Eun</p>
+        <p class="media-cohost ko">은상수 원장과 공동 출연</p>
+        <p class="media-cohost zh">与殷相洙医生共同出演</p>
+        <p class="media-affil-note en">Recorded while serving at the Spine Endoscopy Center, Seoul Bumin Hospital.</p>
+        <p class="media-affil-note ko">서울부민병원 척추내시경센터 재직 당시 촬영.</p>
+        <p class="media-affil-note zh">拍摄时任职于首尔富民医院脊柱内镜中心。</p>
+      </div>
+    </div>
+
+    <div class="media-card">
+      <div class="media-video">
+        <iframe src="https://www.youtube.com/embed/_4TBRhG_5s0" title="의학채널 비온뒤 - 척추협착증 수술" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="media-body">
+        <p class="media-meta">의학채널 비온뒤 · [척추 하브루타] 2편 · 2025.12</p>
+        <p class="media-title en">Spinal Stenosis Surgery — Case-Based Discussion</p>
+        <p class="media-title ko">척추협착증 수술 — 증례 중심 대담</p>
+        <p class="media-title zh">脊柱管狭窄症手术——病例讨论</p>
+        <p class="media-desc en">Part of the "Spine Havruta" series. Reviews lumbar spinal stenosis through patient cases, the criteria for choosing conservative vs. surgical treatment, and when endoscopic spine surgery (PSLD, UBE/BESS) is suitable versus when open surgery is unavoidable. Useful for anyone with spinal stenosis, low back pain, leg numbness, or radiating pain severe enough to limit walking.</p>
+        <p class="media-desc ko">"척추 하브루타" 시리즈 2편. 환자 증례를 통해 요추관 협착증을 살펴보고, 보존적 치료와 수술 치료가 적용되는 기준, PSLD·UBE(BESS) 등 척추내시경 수술로 치료 가능한 경우와 불가피하게 절개 수술이 필요한 경우를 구분해 설명합니다. 걷기 힘들 정도의 척추관 협착증, 허리통증, 다리 저림, 방사통으로 고생하시는 분들이 참고하시면 좋습니다.</p>
+        <p class="media-desc zh">"脊柱哈弗鲁塔"系列第2期。通过病例分析腰椎管狭窄症，说明保守治疗与手术治疗的选择标准，区分适合PSLD、UBE（BESS）等内镜手术的情况与不得不采用切开手术的情况。适合因椎管狭窄、腰痛、腿麻或放射痛而行走困难的患者参考。</p>
+        <p class="media-cohost en">Co-hosted with Dr. Sang-su Eun</p>
+        <p class="media-cohost ko">은상수 원장과 공동 출연</p>
+        <p class="media-cohost zh">与殷相洙医生共同出演</p>
+        <p class="media-affil-note en">Recorded while serving at the Spine Endoscopy Center, Seoul Bumin Hospital.</p>
+        <p class="media-affil-note ko">서울부민병원 척추내시경센터 재직 당시 촬영.</p>
+        <p class="media-affil-note zh">拍摄时任职于首尔富民医院脊柱内镜中心。</p>
+      </div>
+    </div>
+
+    <div class="media-card">
+      <div class="media-video">
+        <iframe src="https://www.youtube.com/embed/Qb16IqQ0Oss" title="의학채널 비온뒤 - 척추내시경 수술" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="media-body">
+        <p class="media-meta">의학채널 비온뒤 · [척추 하브루타] 3편 · 2026.01</p>
+        <p class="media-title en">Endoscopic Spine Surgery — Principles &amp; Case-Based Discussion</p>
+        <p class="media-title ko">척추내시경 수술 — 원리와 증례 중심 대담</p>
+        <p class="media-title zh">脊柱内镜手术——原理与病例讨论</p>
+        <p class="media-desc en">Part of the "Spine Havruta" series. Explains what endoscopic spine surgery is — the principles of uniportal (PSLD) and biportal (UBE/BESS) techniques — and its advantages over conventional open surgery, such as shorter recovery, less tissue damage, and minimal scarring. Relevant for anyone considering surgical treatment for spinal stenosis or disc herniation.</p>
+        <p class="media-desc ko">"척추 하브루타" 시리즈 3편. 척추내시경 수술이 무엇인지 — 단일공(PSLD)과 양방향(UBE/BESS) 술식의 원리와 종류를 중심으로 설명하고, 기존 개방형 수술과 비교했을 때의 장점(회복 기간 단축, 조직 손상 최소화, 흉터 최소화)을 다룹니다. 요추관 협착증, 디스크 탈출증 등으로 수술적 치료를 고민 중이신 분들이 참고하시면 좋습니다.</p>
+        <p class="media-desc zh">"脊柱哈弗鲁塔"系列第3期。介绍脊柱内镜手术的概念——单孔（PSLD）与双通道（UBE/BESS）技术的原理及种类，并说明相较传统开放手术的优势（缩短恢复期、减少组织损伤、最小化疤痕）。适合正在考虑手术治疗腰椎管狭窄症或椎间盘突出的患者参考。</p>
+        <p class="media-cohost en">Co-hosted with Dr. Sang-su Eun</p>
+        <p class="media-cohost ko">은상수 원장과 공동 출연</p>
+        <p class="media-cohost zh">与殷相洙医生共同出演</p>
+        <p class="media-affil-note en">Recorded while serving at the Spine Endoscopy Center, Seoul Bumin Hospital.</p>
+        <p class="media-affil-note ko">서울부민병원 척추내시경센터 재직 당시 촬영.</p>
+        <p class="media-affil-note zh">拍摄时任职于首尔富民医院脊柱内镜中心。</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="rss-note en">Current affiliation: <a href="https://seoulboneone.com/" target="_blank" rel="noopener">President, Seoul Bone One Hospital</a>. Some appearances above were recorded prior to this role.</p>
+  <p class="rss-note ko">현재 소속: <a href="https://seoulboneone.com/" target="_blank" rel="noopener">서울본원병원 대표원장</a>. 위 영상 중 일부는 이전 소속 재직 당시 촬영된 콘텐츠입니다.</p>
+  <p class="rss-note zh">现任职务：<a href="https://seoulboneone.com/" target="_blank" rel="noopener">首尔本源医院院长</a>。以上部分视频拍摄于此前任职期间。</p>
 </section>
 
 <!-- FAQ -->
